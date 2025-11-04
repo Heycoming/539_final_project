@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shirley's Travel Journal</title>
+  <link rel="stylesheet" href="css/htmlReset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="nav-left">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <a href="#places" class="dropdown-toggle">Places <span class="arrow">▼</span></a>
+        <div class="dropdown-menu">
+          <a href="#places" class="all-destinations">All Destinations</a>
+          
+          <!-- New York -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">New York <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">New York City</a>
+              <a href="#places">Buffalo</a>
+              <a href="#places">Albany</a>
+            </div>
+          </div>
+          
+          <!-- Florida -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">Florida <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">Miami</a>
+              <a href="#places">Orlando</a>
+              <a href="#places">Tampa</a>
+              <a href="#places">Key West</a>
+            </div>
+          </div>
+          
+          <!-- Nevada -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">Nevada <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">Las Vegas</a>
+              <a href="#places">Reno</a>
+            </div>
+          </div>
+          
+          <!-- Utah -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">Utah <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">Salt Lake City</a>
+              <a href="#places">Moab</a>
+              <a href="#places">Park City</a>
+            </div>
+          </div>
+          
+          <!-- Arizona -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">Arizona <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">Phoenix</a>
+              <a href="#places">Sedona</a>
+              <a href="#places">Tucson</a>
+            </div>
+          </div>
+          
+          <!-- Colorado -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">Colorado <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">Denver</a>
+              <a href="#places">Aspen</a>
+              <a href="#places">Boulder</a>
+            </div>
+          </div>
+          
+          <!-- New Mexico -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">New Mexico <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">Santa Fe</a>
+              <a href="#places">Albuquerque</a>
+            </div>
+          </div>
+          
+          <!-- Peninsula -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">Peninsula <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">San Francisco</a>
+              <a href="#places">San Jose</a>
+              <a href="#places">Palo Alto</a>
+            </div>
+          </div>
+          
+          <!-- DC -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">Washington DC <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">Capitol Hill</a>
+              <a href="#places">Georgetown</a>
+            </div>
+          </div>
+          
+          <!-- Washington -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">Washington <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">Seattle</a>
+              <a href="#places">Spokane</a>
+              <a href="#places">Tacoma</a>
+            </div>
+          </div>
+          
+          <!-- Michigan -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">Michigan <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">Detroit</a>
+              <a href="#places">Ann Arbor</a>
+              <a href="#places">Grand Rapids</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="logo">
+      <img src="image/logo.png" alt="Logo">
+    </div>
+    
+    <nav class="nav-right">
+      <a href="#gallery">Photography</a>
+      <a href="about.html">About Me</a>
+      <a href="#" class="donate-link">Donate</a>
+    </nav>
+    
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay">
+    <div class="mobile-menu-header">
+      <div class="logo"><img src="image/logo.png" alt="Logo"></div>
+      <div class="close-menu">✕</div>
+    </div>
+    <nav class="mobile-nav">
+      <a href="#home">Home</a>
+      
+      <div class="mobile-dropdown">
+        <a href="#places" class="mobile-dropdown-toggle">Places <span class="arrow">▼</span></a>
+        <div class="mobile-dropdown-menu">
+          <a href="#places" class="all-destinations">All Destinations</a>
+          
+          <!-- Mobile 二级菜单 -->
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">New York <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">New York City</a>
+              <a href="#places">Buffalo</a>
+              <a href="#places">Albany</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Florida <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">Miami</a>
+              <a href="#places">Orlando</a>
+              <a href="#places">Tampa</a>
+              <a href="#places">Key West</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Nevada <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">Las Vegas</a>
+              <a href="#places">Reno</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Utah <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">Salt Lake City</a>
+              <a href="#places">Moab</a>
+              <a href="#places">Park City</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Arizona <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">Phoenix</a>
+              <a href="#places">Sedona</a>
+              <a href="#places">Tucson</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Colorado <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">Denver</a>
+              <a href="#places">Aspen</a>
+              <a href="#places">Boulder</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">New Mexico <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">Santa Fe</a>
+              <a href="#places">Albuquerque</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Peninsula <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">San Francisco</a>
+              <a href="#places">San Jose</a>
+              <a href="#places">Palo Alto</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Washington DC <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">Capitol Hill</a>
+              <a href="#places">Georgetown</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Washington <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">Seattle</a>
+              <a href="#places">Spokane</a>
+              <a href="#places">Tacoma</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Michigan <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">Detroit</a>
+              <a href="#places">Ann Arbor</a>
+              <a href="#places">Grand Rapids</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <a href="#gallery">Photography</a>
+      <a href="about.html">About Me</a>
+      <a href="#" class="mobile-donate">Donate</a>
+    </nav>
+  </div>
+
+
+
+  <main>
+    <!-- Hero 滑块区域 -->
+    <section id="sliderr">
+      <div class="slider-inner">
+        <!-- 文字内容 1 -->
+        <div class="slider-content active" data-slide="0">
+          <div class="meta">Shirley's</div>
+          <h2>Travel <br>Journal</h2>
+          <div class="meta">Always</div>
+          <div class="slide-status">On the Road</div>
+        </div>
+
+        <!-- 文字内容 2 -->
+        <div class="slider-content" data-slide="1">
+          <div class="meta">Explore</div>
+          <h2>New York <br>City</h2>
+          <div class="meta">Adventure</div>
+          <div class="slide-status">Urban Dreams</div>
+        </div>
+
+        <!-- 文字内容 3 -->
+        <div class="slider-content" data-slide="2">
+          <div class="meta">Discover</div>
+          <h2>Seattle <br>Views</h2>
+          <div class="meta">Journey</div>
+          <div class="slide-status">Pacific Northwest</div>
+        </div>
+      </div>
+      
+      <!-- 新的滑块结构 -->
+      <div class="image-slider">
+        <ul>
+          <li class="slide active" data-slide="0">
+            <img src="image/cover.jpg" alt="North Michigan Cover">
+          </li>
+          <li class="slide" data-slide="1">
+            <img src="image/image2.jpg" alt="New York Cover">
+          </li>
+          <li class="slide" data-slide="2">
+            <img src="image/image3.jpg" alt="Seattle Cover">
+          </li>
+        </ul>
+        <a class="prev" href="#">prev</a>
+        <a class="next" href="#">next</a>
+      </div>
+    </section>
+
+    <!-- 城市图标区域 -->
+    <section id="places">
+      <div class="icon-title-container">
+        <div class="clock">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123024/wwf-logo.png" alt="Logo">
+        </div>
+        <div class="country">LONDON</div>
+      </div>
+      <div class="icon-title-container">
+        <div class="clock">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123024/wwf-logo.png" alt="Logo">
+        </div>
+        <div class="country">NEW YORK</div>
+      </div>
+      <div class="icon-title-container">
+        <div class="clock">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123024/wwf-logo.png" alt="Logo">
+        </div>
+        <div class="country">NEW DELHI</div>
+      </div>
+      <div class="icon-title-container">
+        <div class="clock">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123024/wwf-logo.png" alt="Logo">
+        </div>
+        <div class="country">ABUJA</div>
+      </div>
+    </section>
+
+    <!-- Gallery 区域 -->
+    <section id="gallery">
+      <div class="gallery-container">
+        <h1>Explore the World</h1>
+        <p class="subtitle">Discover amazing destinations around the globe</p>
+        
+        <div class="gallery-grid">
+          <!-- Card 1 -->
+          <div class="card">
+            <div class="card-image">
+              <img src="image/cover.jpg" alt="Paris">
+            </div>
+            <div class="card-content">
+              <div class="location-tag">Europe</div>
+              <h3>Paris, France</h3>
+              <p class="description">The City of Light awaits with its iconic Eiffel Tower and charming cafés</p>
+              <a href="#" class="read-more">Explore →</a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card">
+            <div class="card-image">
+              <img src="image/image2.jpg" alt="Tokyo">
+            </div>
+            <div class="card-content">
+              <div class="location-tag">Asia</div>
+              <h3>Tokyo, Japan</h3>
+              <p class="description">Where ancient traditions meet futuristic innovation</p>
+              <a href="#" class="read-more">Explore →</a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card">
+            <div class="card-image">
+              <img src="image/image3.jpg" alt="Santorini">
+            </div>
+            <div class="card-content">
+              <div class="location-tag">Europe</div>
+              <h3>Santorini, Greece</h3>
+              <p class="description">Stunning sunsets and white-washed buildings overlooking the Aegean Sea</p>
+              <a href="#" class="read-more">Explore →</a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card">
+            <div class="card-image">
+              <img src="image/cover.jpg" alt="Bali">
+            </div>
+            <div class="card-content">
+              <div class="location-tag">Asia</div>
+              <h3>Bali, Indonesia</h3>
+              <p class="description">Tropical paradise with lush rice terraces and spiritual temples</p>
+              <a href="#" class="read-more">Explore →</a>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="card">
+            <div class="card-image">
+              <img src="image/image2.jpg" alt="New York">
+            </div>
+            <div class="card-content">
+              <div class="location-tag">North America</div>
+              <h3>New York, USA</h3>
+              <p class="description">The city that never sleeps, filled with endless possibilities</p>
+              <a href="#" class="read-more">Explore →</a>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="card">
+            <div class="card-image">
+              <img src="image/image3.jpg" alt="Iceland">
+            </div>
+            <div class="card-content">
+              <div class="location-tag">Europe</div>
+              <h3>Reykjavik, Iceland</h3>
+              <p class="description">Land of fire and ice with breathtaking Northern Lights</p>
+              <a href="#" class="read-more">Explore →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Shirley's Travel Journal. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </footer>
+
+<script>
+  // ==========================================
+  // 图片和文字滑块功能
+  // ==========================================
+  document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.image-slider .slide');
+    const textContents = document.querySelectorAll('.slider-content');
+    const prevBtn = document.querySelector('.image-slider .prev');
+    const nextBtn = document.querySelector('.image-slider .next');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      // 移除所有 active 类
+      slides.forEach(slide => slide.classList.remove('active'));
+      textContents.forEach(content => content.classList.remove('active'));
+      
+      // 添加 active 类到当前项
+      slides[index].classList.add('active');
+      textContents[index].classList.add('active');
+    }
+
+    // 下一张按钮
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      });
+    }
+
+    // 上一张按钮
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      });
+    }
+
+    // 自动播放（每5秒切换一次）
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 5000);
+  });
+
+  // ==========================================
+  // Mobile Menu Toggle
+  // ==========================================
+  document.addEventListener('DOMContentLoaded', function() {
+    const burger = document.querySelector('.burger');
+    const mobileMenu = document.querySelector('.mobile-menu-overlay');
+    const closeMenu = document.querySelector('.close-menu');
+    const mobileDropdown = document.querySelector('.mobile-dropdown');
+    const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
+    
+    // 打开移动菜单
+    if (burger) {
+      burger.addEventListener('click', function() {
+        burger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+      });
+    }
+    
+    // 关闭移动菜单
+    if (closeMenu) {
+      closeMenu.addEventListener('click', function() {
+        burger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    }
+    
+    // Mobile dropdown toggle (Places 一级菜单)
+    if (mobileDropdownToggle) {
+      mobileDropdownToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        mobileDropdown.classList.toggle('active');
+      });
+    }
+    
+    // Mobile submenu toggles (州的二级菜单)
+    const mobileSubmenuToggles = document.querySelectorAll('.mobile-submenu-toggle');
+    mobileSubmenuToggles.forEach(toggle => {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        const submenu = this.closest('.mobile-submenu');
+        submenu.classList.toggle('active');
+      });
+    });
+    
+    // 点击城市链接时关闭菜单
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav a:not(.mobile-dropdown-toggle):not(.mobile-submenu-toggle)');
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        burger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+  });
+</script>
+
+
+</body>
+</html>

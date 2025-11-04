@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Shirley's Travel Journal</title>
+  <link rel="stylesheet" href="css/htmlReset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="nav-left">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <a href="#places" class="dropdown-toggle">Places <span class="arrow">▼</span></a>
+        <div class="dropdown-menu">
+          <a href="#places" class="all-destinations">All Destinations</a>
+          
+          <!-- New York -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">New York <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">New York City</a>
+              <a href="#places">Buffalo</a>
+              <a href="#places">Albany</a>
+            </div>
+          </div>
+          
+          <!-- Florida -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">Florida <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">Miami</a>
+              <a href="#places">Orlando</a>
+              <a href="#places">Tampa</a>
+              <a href="#places">Key West</a>
+            </div>
+          </div>
+          
+          <!-- Nevada -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">Nevada <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">Las Vegas</a>
+              <a href="#places">Reno</a>
+            </div>
+          </div>
+          
+          <!-- Utah -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">Utah <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">Salt Lake City</a>
+              <a href="#places">Moab</a>
+              <a href="#places">Park City</a>
+            </div>
+          </div>
+          
+          <!-- Arizona -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">Arizona <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">Phoenix</a>
+              <a href="#places">Sedona</a>
+              <a href="#places">Tucson</a>
+            </div>
+          </div>
+          
+          <!-- Colorado -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">Colorado <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">Denver</a>
+              <a href="#places">Aspen</a>
+              <a href="#places">Boulder</a>
+            </div>
+          </div>
+          
+          <!-- New Mexico -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">New Mexico <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">Santa Fe</a>
+              <a href="#places">Albuquerque</a>
+            </div>
+          </div>
+          
+          <!-- Peninsula -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">Peninsula <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">San Francisco</a>
+              <a href="#places">San Jose</a>
+              <a href="#places">Palo Alto</a>
+            </div>
+          </div>
+          
+          <!-- DC -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">Washington DC <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">Capitol Hill</a>
+              <a href="#places">Georgetown</a>
+            </div>
+          </div>
+          
+          <!-- Washington -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">Washington <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">Seattle</a>
+              <a href="#places">Spokane</a>
+              <a href="#places">Tacoma</a>
+            </div>
+          </div>
+          
+          <!-- Michigan -->
+          <div class="dropdown-submenu">
+            <a href="#" class="submenu-toggle">Michigan <span class="arrow-right">›</span></a>
+            <div class="submenu-content">
+              <a href="#places">Detroit</a>
+              <a href="#places">Ann Arbor</a>
+              <a href="#places">Grand Rapids</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="logo">
+      <img src="image/logo.png" alt="Logo">
+    </div>
+    
+    <nav class="nav-right">
+      <a href="#gallery">Photography</a>
+      <a href="about.html">About Me</a>
+      <a href="#" class="donate-link">Donate</a>
+    </nav>
+    
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay">
+    <div class="mobile-menu-header">
+      <div class="logo"><img src="image/logo.png" alt="Logo"></div>
+      <div class="close-menu">✕</div>
+    </div>
+    <nav class="mobile-nav">
+      <a href="#home">Home</a>
+      
+      <div class="mobile-dropdown">
+        <a href="#places" class="mobile-dropdown-toggle">Places <span class="arrow">▼</span></a>
+        <div class="mobile-dropdown-menu">
+          <a href="#places" class="all-destinations">All Destinations</a>
+          
+          <!-- Mobile 二级菜单 -->
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">New York <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">New York City</a>
+              <a href="#places">Buffalo</a>
+              <a href="#places">Albany</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Florida <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">Miami</a>
+              <a href="#places">Orlando</a>
+              <a href="#places">Tampa</a>
+              <a href="#places">Key West</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Nevada <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">Las Vegas</a>
+              <a href="#places">Reno</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Utah <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">Salt Lake City</a>
+              <a href="#places">Moab</a>
+              <a href="#places">Park City</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Arizona <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">Phoenix</a>
+              <a href="#places">Sedona</a>
+              <a href="#places">Tucson</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Colorado <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">Denver</a>
+              <a href="#places">Aspen</a>
+              <a href="#places">Boulder</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">New Mexico <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">Santa Fe</a>
+              <a href="#places">Albuquerque</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Peninsula <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">San Francisco</a>
+              <a href="#places">San Jose</a>
+              <a href="#places">Palo Alto</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Washington DC <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">Capitol Hill</a>
+              <a href="#places">Georgetown</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Washington <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">Seattle</a>
+              <a href="#places">Spokane</a>
+              <a href="#places">Tacoma</a>
+            </div>
+          </div>
+          
+          <div class="mobile-submenu">
+            <a href="#" class="mobile-submenu-toggle">Michigan <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">Detroit</a>
+              <a href="#places">Ann Arbor</a>
+              <a href="#places">Grand Rapids</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <a href="#gallery">Photography</a>
+      <a href="about.html">About Me</a>
+      <a href="#" class="mobile-donate">Donate</a>
+    </nav>
+  </div>
+
+
+
+  <main>
+    <!-- Hero Section -->
+    <section id="about-hero">
+      <div class="hero-content">
+        <div class="meta">Hello, I'm</div>
+        <h1>Shirley</h1>
+        <div class="meta">Travel Enthusiast</div>
+        <p class="tagline">Wanderer • Photographer • Storyteller</p>
+      </div>
+      <div class="hero-image">
+        <img src="image/cover.jpg" alt="Shirley">
+      </div>
+    </section>
+
+    <!-- About Content Section -->
+    <section id="about-content">
+      <div class="content-wrapper">
+        <!-- My Story -->
+        <div class="story-section">
+          <h2>My Story</h2>
+          <div class="story-grid">
+            <div class="story-text">
+              <p>
+                I've always been captivated by the world's diversity—the way a sunrise looks different in every corner of the globe, 
+                how each culture tells its own unique story through food, art, and tradition. My journey as a traveler began with 
+                a simple backpack and a one-way ticket to Europe, and it has since evolved into a lifelong passion.
+              </p>
+              <p>
+                Over the past 8 years, I've explored more than 45 countries across 6 continents. From the bustling streets of Tokyo 
+                to the serene landscapes of Iceland, each destination has taught me something new about the world and about myself.
+              </p>
+              <p>
+                Through this journal, I share not just the places I visit, but the experiences, the people I meet, and the lessons 
+                learned along the way. Travel, to me, is more than just seeing new places—it's about connecting with humanity in 
+                its most authentic form.
+              </p>
+            </div>
+            <div class="story-image">
+              <img src="image/image2.jpg" alt="Travel moment">
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+          <div class="stat-item">
+            <div class="stat-number">45+</div>
+            <div class="stat-label">Countries Visited</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">6</div>
+            <div class="stat-label">Continents Explored</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">1000+</div>
+            <div class="stat-label">Photos Captured</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">8</div>
+            <div class="stat-label">Years Traveling</div>
+          </div>
+        </div>
+
+        <!-- What I Do -->
+        <div class="services-section">
+          <h2>What I Do</h2>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">📸</div>
+              <h3>Travel Photography</h3>
+              <p>Capturing the essence of destinations through my lens, telling visual stories that inspire wanderlust.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">✍️</div>
+              <h3>Travel Writing</h3>
+              <p>Sharing detailed guides, personal experiences, and practical tips for fellow travelers.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🗺️</div>
+              <h3>Trip Planning</h3>
+              <p>Helping others plan their dream adventures with insider knowledge and recommendations.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🎥</div>
+              <h3>Content Creation</h3>
+              <p>Creating engaging travel content for social media, blogs, and digital platforms.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Travel Philosophy -->
+        <div class="philosophy-section">
+          <h2>My Travel Philosophy</h2>
+          <div class="philosophy-content">
+            <div class="philosophy-item">
+              <div class="philosophy-number">01</div>
+              <h3>Travel Slow</h3>
+              <p>I believe in spending quality time in each destination, immersing myself in local culture rather than rushing through a checklist.</p>
+            </div>
+            <div class="philosophy-item">
+              <div class="philosophy-number">02</div>
+              <h3>Connect Authentically</h3>
+              <p>The best travel experiences come from genuine connections with locals and fellow travelers.</p>
+            </div>
+            <div class="philosophy-item">
+              <div class="philosophy-number">03</div>
+              <h3>Respect & Preserve</h3>
+              <p>Traveling responsibly means respecting local customs, supporting local businesses, and minimizing environmental impact.</p>
+            </div>
+            <div class="philosophy-item">
+              <div class="philosophy-number">04</div>
+              <h3>Stay Curious</h3>
+              <p>Every place has a story to tell. I approach each destination with an open mind and endless curiosity.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Highlights -->
+        <div class="highlights-section">
+          <h2>Travel Highlights</h2>
+          <div class="highlights-grid">
+            <div class="highlight-card">
+              <img src="image/cover.jpg" alt="Highlight 1">
+              <div class="highlight-overlay">
+                <h3>Northern Lights</h3>
+                <p>Iceland, 2022</p>
+              </div>
+            </div>
+            <div class="highlight-card">
+              <img src="image/image2.jpg" alt="Highlight 2">
+              <div class="highlight-overlay">
+                <h3>Cherry Blossoms</h3>
+                <p>Japan, 2021</p>
+              </div>
+            </div>
+            <div class="highlight-card">
+              <img src="image/image3.jpg" alt="Highlight 3">
+              <div class="highlight-overlay">
+                <h3>Mountain Peaks</h3>
+                <p>Switzerland, 2023</p>
+              </div>
+            </div>
+            <div class="highlight-card">
+              <img src="image/cover.jpg" alt="Highlight 4">
+              <div class="highlight-overlay">
+                <h3>Desert Dunes</h3>
+                <p>Morocco, 2020</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact CTA -->
+        <div class="contact-section">
+          <h2>Let's Connect</h2>
+          <p>Have questions about a destination? Want to collaborate? Or just want to chat about travel?</p>
+          <div class="contact-buttons">
+            <a href="mailto:shirley@example.com" class="btn-primary">Send Email</a>
+            <a href="#" class="btn-secondary">Follow on Instagram</a>
+          </div>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="YouTube">📹</a>
+            <a href="#" aria-label="Facebook">👍</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Shirley's Travel Journal. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
