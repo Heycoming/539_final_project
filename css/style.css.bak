@@ -1,0 +1,1455 @@
+nnet
+/* ==========================================
+   DESTINATION PAGE - DAYS GALLERY (完全复刻版)
+   ========================================== */
+/* Days Gallery Section */
+#days-gallery {
+  /* background-color: #1f1f1f; */
+  padding-top: 30px;
+  /* min-height: 100vh; */
+}
+
+#days-gallery .section-title {
+  color: white;
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'serif';
+}
+
+#days-gallery .section-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/* Days Container */
+#days-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  min-height: 500px;
+}
+
+/* Day Slide Styles */
+.day-slide {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 1.0s ease;
+}
+
+/* Last Viewed State - 重要：控制关闭时的过渡 */
+.day-slide.last-viewed .btn-close::after {
+  transition-delay: 0s;
+}
+
+.day-slide.last-viewed .btn-close::before {
+  transition-delay: 0.1s;
+}
+
+.day-slide.last-viewed .day-content .day-info {
+  transition-delay: 0s;
+}
+
+.day-slide.last-viewed .day-content .day-info li:nth-of-type(1) {
+  transition-delay: 0.2s;
+}
+
+.day-slide.last-viewed .day-content .day-info li:nth-of-type(2) {
+  transition-delay: 0.4s;
+}
+
+.day-slide.last-viewed .day-content .day-info li:nth-of-type(3) {
+  transition-delay: 0.6s;
+}
+
+.day-slide.last-viewed .day-content .day-emblem {
+  transition: all 0.5s ease;
+  transition-delay: 0s;
+}
+
+/* Last Viewed & Active - 图片状态 */
+.day-slide.last-viewed .day-image,
+.day-slide.active .day-image {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Active State - 展开状态 */
+.day-slide.active {
+  cursor: default;
+}
+
+/* 关键：左侧虚化栏效果 - overlay 从全屏缩小到 25% 宽度 */
+.day-slide.active .day-overlay {
+  width: 25%;
+  background-size: 100% 100%;
+  transition: all 1.25s ease;
+  transition-delay: 1.75s;
+}
+
+/* Content 占满整个卡片 */
+.day-slide.active .day-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Title 显示在左侧 25% 区域 */
+.day-slide.active .day-content .day-title {
+  width: 25%;
+  opacity: 1;
+  transform: translateY(30px);
+  transition: all 1s ease;
+  transition-delay: 1.25s;
+}
+
+.day-slide.active .day-content .day-title::after {
+  height: 100%;
+  color: white;
+  overflow: initial;
+}
+
+.day-slide.active .day-content .day-title::before {
+  transform: scaleX(1);
+  transition-delay: 2s;
+}
+
+/* Day Info 显示 */
+.day-slide.active .day-content .day-info {
+  opacity: 1;
+}
+
+.day-slide.active .day-content .day-info li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Emblem 显示 */
+.day-slide.active .day-content .day-emblem {
+  opacity: 0.8;
+  transform: translateY(100px);
+}
+
+/* Close Button 显示 */
+.day-slide.active .btn-close {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.day-slide.active .btn-close::before,
+.day-slide.active .btn-close::after {
+  opacity: 1;
+}
+
+.day-slide.active .btn-close::after {
+  transform: rotate(45deg) translateX(0px);
+}
+
+.day-slide.active .btn-close::before {
+  transform: rotate(-45deg) translateX(0px);
+}
+
+/* Animation In State */
+.day-slide.anim-in {
+  transition-delay: 0.5s;
+}
+
+.day-slide.anim-in .day-image {
+  top: -20%;
+  left: -140%;
+  height: 140%;
+  width: 140%;
+  animation: dayImgAnimIn 1.2s forwards;
+}
+
+/* Animation Out State */
+.day-slide.anim-out {
+  flex: 0;
+  cursor: default;
+  transition-delay: 0.5s;
+}
+
+.day-slide.anim-out .day-image {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  animation: dayImgAnimOut 1.2s forwards;
+}
+
+/* Staggered animation delays */
+.day-slide:nth-of-type(1).anim-in .day-image { animation-delay: 0.2s; }
+.day-slide:nth-of-type(2).anim-in .day-image { animation-delay: 0.4s; }
+.day-slide:nth-of-type(3).anim-in .day-image { animation-delay: 0.6s; }
+.day-slide:nth-of-type(4).anim-in .day-image { animation-delay: 0.8s; }
+
+.day-slide:nth-of-type(1).anim-out .day-image { animation-delay: 0.2s; }
+.day-slide:nth-of-type(2).anim-out .day-image { animation-delay: 0.4s; }
+.day-slide:nth-of-type(3).anim-out .day-image { animation-delay: 0.6s; }
+.day-slide:nth-of-type(4).anim-out .day-image { animation-delay: 0.8s; }
+
+/* Day Image */
+.day-image {
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+  pointer-events: none;
+  transition: all 1s ease;
+}
+
+/* Day Overlay - 关键：渐变从深到浅，初始覆盖整个卡片 */
+.day-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0));
+  background-position: 0 0;
+  background-size: 100% 200%;
+  opacity: 1;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+/* Day Content */
+.day-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* Day Title */
+.day-title {
+  position: absolute;
+  top: -10px;
+  height: 65px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 3em;
+  text-align: center;
+  text-shadow: 0 2px 2px #2f2f2f;
+  color: #3f3f3f;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  font-family: 'serif';
+}
+
+.day-title::after {
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 100%;
+  display: block;
+  content: attr(data-title);
+  overflow: hidden;
+  color: #ffd700;
+  transition: all 0.85s ease;
+}
+
+.day-title::before {
+  position: absolute;
+  bottom: 15px;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 85%;
+  background: white;
+  box-shadow: 0 2px 6px #2f2f2f;
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 1.25s ease;
+}
+
+/* Day Emblem */
+.day-emblem {
+  position: absolute;
+  height: 200px;
+  width: 25%;
+  opacity: 0;
+  transform: translateY(120px);
+  transition: all 1s ease;
+  transition-delay: 1.75s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 120px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Day Info */
+.day-info {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  padding: 30px 30px 30px 120px;
+  font-size: 1.25em;
+  color: white;
+  text-shadow: 0 1px 4px #0f0f0f;
+  background-image: linear-gradient(90deg, rgba(20, 20, 20, 0), rgba(20, 20, 20, 0.7));
+  opacity: 0;
+  transition: all 1s ease;
+  transition-delay: 2s;
+  list-style: none;
+}
+
+.day-info li {
+  position: relative;
+  margin-bottom: 5px;
+  text-align: justify;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.75s ease;
+}
+
+.day-info li:nth-of-type(1) { transition-delay: 2.7s; }
+.day-info li:nth-of-type(2) { transition-delay: 2.9s; }
+.day-info li:nth-of-type(3) { transition-delay: 3.1s; }
+
+/* Close Button */
+.btn-close {
+  position: absolute;
+  z-index: 100;
+  top: 20px;
+  right: 20px;
+  height: 24px;
+  width: 24px;
+  pointer-events: none;
+}
+
+.btn-close::before,
+.btn-close::after {
+  position: absolute;
+  top: 12px;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.btn-close::after {
+  transform: rotate(45deg) translateX(-12px);
+  transition-delay: 3s;
+}
+
+.btn-close::before {
+  transform: rotate(-45deg) translateX(12px);
+  transition-delay: 3.2s;
+}
+
+/* Hover State (only for non-active slides) */
+.day-slide:hover:not(.active):not(.anim-out) .day-image {
+  transform: scale(1.1);
+}
+
+.day-slide:hover:not(.active):not(.anim-out) .day-overlay {
+  opacity: 0.6;
+}
+
+.day-slide:hover:not(.active):not(.anim-out) .day-content .day-title {
+  opacity: 1;
+  transform: translateY(30px);
+}
+
+.day-slide:hover:not(.active):not(.anim-out) .day-content .day-title::after {
+  height: 100%;
+}
+
+/* Keyframe Animations */
+@keyframes dayImgAnimIn {
+  to {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@keyframes dayImgAnimOut {
+  to {
+    left: -100%;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN FOR DAYS GALLERY
+   ========================================== */
+
+/* Tablet - 2 columns */
+@media screen and (max-width: 1024px) {
+  #days-container {
+    flex-wrap: wrap;
+    height: auto;
+    min-height: auto;
+    gap: 10px;
+  }
+
+  .day-slide {
+    flex: 1 1 calc(50% - 5px);
+    min-height: 400px;
+    height: 400px;
+  }
+
+  .day-slide.active {
+    flex: 1 1 100%;
+    height: 70vh;
+    min-height: 500px;
+  }
+
+  .day-slide.anim-out {
+    flex: 1 1 calc(50% - 5px);
+    height: 400px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  #days-gallery .section-title {
+    font-size: 36px;
+  }
+
+  .day-title {
+    font-size: 2.5em;
+  }
+
+  .day-emblem {
+    font-size: 100px;
+  }
+}
+
+/* Mobile - 1 column */
+@media screen and (max-width: 600px) {
+  #days-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .day-slide {
+    flex: 1 1 100%;
+    min-height: 350px;
+    height: 350px;
+  }
+
+  .day-slide.active {
+    min-height: 80vh;
+    height: 80vh;
+  }
+
+  .day-slide.anim-out {
+    flex: 1 1 100%;
+    min-height: 350px;
+    height: 350px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  #days-gallery {
+    padding: 60px 15px;
+  }
+
+  #days-gallery .section-title {
+    font-size: 28px;
+  }
+
+  #days-gallery .section-subtitle {
+    font-size: 14px;
+    /* margin-bottom: 40px; */
+  }
+
+  .day-title {
+    font-size: 2em;
+  }
+
+  /* Mobile 上左侧栏宽度调整为 35% */
+  .day-slide.active .day-overlay {
+    width: 35%;
+  }
+
+  .day-slide.active .day-content .day-title {
+    width: 35%;
+  }
+
+  .day-emblem {
+    font-size: 60px;
+    width: 35%;
+  }
+
+  .day-info {
+    padding: 20px;
+    font-size: 0.9em;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .day-info li {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .day-title {
+    font-size: 1.8em;
+  }
+
+  .day-emblem {
+    font-size: 50px;
+  }
+
+  .day-info {
+    font-size: 0.85em;
+    padding: 15px;
+  }
+
+  /* 超小屏幕上左侧栏宽度调整为 40% */
+  .day-slide.active .day-overlay {
+    width: 40%;
+  }
+
+  .day-slide.active .day-content .day-title {
+    width: 40%;
+  }
+
+  .day-emblem {
+    width: 40%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////
+
+
+
+/* ==========================================
+   NORTH MICHIGAN PAGE STYLES (Mobile First)
+   ========================================== */
+
+/* Section Titles */
+.section-title {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+  /* ?? */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+.day-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+/* Day Info */
+.day-info {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #667eea;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.info-item .icon {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+}
+
+/* Day Card Button */
+.day-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.day-card-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.day-card-btn:hover::before {
+  left: 100%;
+}
+
+.day-card-btn:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-arrow {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+  transition: transform 0.3s ease;
+}
+
+.day-card-btn:hover .btn-arrow {
+  transform: translateX(5px);
+}
+
+/* Tips Section */
+.tips-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.tip-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+}
+
+.tip-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 25px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.tip-card:hover .tip-icon {
+  transform: rotate(360deg);
+}
+
+.tip-icon svg {
+  width: 35px;
+  height: 35px;
+  stroke: #ffffff;
+  stroke-width: 2;
+}
+
+.tip-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.tip-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #666;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+/* Footer Styles */
+.main-footer {
+  background: rgba(26, 29, 32, 0.98);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 60px 0 30px;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.footer-section p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #ffd700;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #ffd700;
+  color: #1a1d20;
+  transform: translateY(-3px);
+}
+
+.social-links svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+/* ==========================================
+   DAYS GALLERY SECTION (Mobile First)
+   ========================================== */
+#days-gallery {
+  padding: 60px 15px;
+}
+
+#days-gallery .section-title {
+  color: white;
+  font-size: 28px;
+  font-family: 'serif';
+}
+
+#days-gallery .section-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+/* Days Container */
+#days-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  min-height: auto;
+  gap: 15px;
+}
+
+/* Day Slide Styles */
+.day-slide {
+  position: relative;
+  flex: 1 1 100%;
+  min-height: 350px;
+  height: 350px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 1.0s ease;
+}
+
+/* Last Viewed State */
+.day-slide.last-viewed .btn-close::after {
+  transition-delay: 0s;
+}
+
+.day-slide.last-viewed .btn-close::before {
+  transition-delay: 0.1s;
+}
+
+.day-slide.last-viewed .day-content .day-info {
+  transition-delay: 0s;
+}
+
+.day-slide.last-viewed .day-content .day-info li:nth-of-type(1) {
+  transition-delay: 0.2s;
+}
+
+.day-slide.last-viewed .day-content .day-info li:nth-of-type(2) {
+  transition-delay: 0.4s;
+}
+
+.day-slide.last-viewed .day-content .day-info li:nth-of-type(3) {
+  transition-delay: 0.6s;
+}
+
+.day-slide.last-viewed .day-content .day-emblem {
+  transition: all 0.5s ease;
+  transition-delay: 0s;
+}
+
+.day-slide.last-viewed .day-image,
+.day-slide.active .day-image {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Active State */
+.day-slide.active {
+  cursor: default;
+  min-height: 80vh;
+  height: 80vh;
+}
+
+.day-slide.active .day-overlay {
+  width: 40%;
+  background-size: 100% 100%;
+  transition: all 1.25s ease;
+  transition-delay: 1.75s;
+}
+
+.day-slide.active .day-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.day-slide.active .day-content .day-title {
+  width: 40%;
+  opacity: 1;
+  transform: translateY(30px);
+  transition: all 1s ease;
+  transition-delay: 1.25s;
+}
+
+.day-slide.active .day-content .day-title::after {
+  height: 100%;
+  color: white;
+  overflow: initial;
+}
+
+.day-slide.active .day-content .day-title::before {
+  transform: scaleX(1);
+  transition-delay: 2s;
+}
+
+.day-slide.active .day-content .day-info {
+  opacity: 1;
+}
+
+.day-slide.active .day-content .day-info li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.day-slide.active .day-content .day-emblem {
+  opacity: 0.8;
+  transform: translateY(100px);
+}
+
+.day-slide.active .btn-close {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.day-slide.active .btn-close::before,
+.day-slide.active .btn-close::after {
+  opacity: 1;
+}
+
+.day-slide.active .btn-close::after {
+  transform: rotate(45deg) translateX(0px);
+}
+
+.day-slide.active .btn-close::before {
+  transform: rotate(-45deg) translateX(0px);
+}
+
+/* Animation In State */
+.day-slide.anim-in {
+  transition-delay: 0.5s;
+}
+
+.day-slide.anim-in .day-image {
+  top: -20%;
+  left: -140%;
+  height: 140%;
+  width: 140%;
+  animation: dayImgAnimIn 1.2s forwards;
+}
+
+/* Animation Out State */
+.day-slide.anim-out {
+  flex: 1 1 100%;
+  min-height: 350px;
+  height: 350px;
+  cursor: default;
+  transition-delay: 0.5s;
+}
+
+.day-slide.anim-out .day-image {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  animation: dayImgAnimOut 1.2s forwards;
+}
+
+/* Staggered animation delays */
+.day-slide:nth-of-type(1).anim-in .day-image { animation-delay: 0.2s; }
+.day-slide:nth-of-type(2).anim-in .day-image { animation-delay: 0.4s; }
+.day-slide:nth-of-type(3).anim-in .day-image { animation-delay: 0.6s; }
+.day-slide:nth-of-type(4).anim-in .day-image { animation-delay: 0.8s; }
+
+.day-slide:nth-of-type(1).anim-out .day-image { animation-delay: 0.2s; }
+.day-slide:nth-of-type(2).anim-out .day-image { animation-delay: 0.4s; }
+.day-slide:nth-of-type(3).anim-out .day-image { animation-delay: 0.6s; }
+.day-slide:nth-of-type(4).anim-out .day-image { animation-delay: 0.8s; }
+
+/* Day Image */
+.day-image {
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+  pointer-events: none;
+  transition: all 1s ease;
+}
+
+/* Day Overlay */
+.day-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0));
+  background-position: 0 0;
+  background-size: 100% 200%;
+  opacity: 1;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+/* Day Content */
+.day-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* Day Title */
+.day-title {
+  position: absolute;
+  top: -10px;
+  height: 65px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.8em;
+  text-align: center;
+  text-shadow: 0 2px 2px #2f2f2f;
+  color: #3f3f3f;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  font-family: 'serif';
+}
+
+.day-title::after {
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 100%;
+  display: block;
+  content: attr(data-title);
+  overflow: hidden;
+  color: #ffd700;
+  transition: all 0.85s ease;
+}
+
+.day-title::before {
+  position: absolute;
+  bottom: 15px;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 85%;
+  background: white;
+  box-shadow: 0 2px 6px #2f2f2f;
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 1.25s ease;
+}
+
+/* Day Emblem */
+.day-emblem {
+  position: absolute;
+  height: 200px;
+  width: 40%;
+  opacity: 0;
+  transform: translateY(120px);
+  transition: all 1s ease;
+  transition-delay: 1.75s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Day Info */
+#days-gallery .day-info {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  padding: 15px;
+  font-size: 0.85em;
+  color: white;
+  text-shadow: 0 1px 4px #0f0f0f;
+  background-image: linear-gradient(90deg, rgba(20, 20, 20, 0), rgba(20, 20, 20, 0.7));
+  opacity: 0;
+  transition: all 1s ease;
+  transition-delay: 2s;
+  list-style: none;
+  display: block;
+  margin-bottom: 0;
+}
+
+#days-gallery .day-info li {
+  position: relative;
+  margin-bottom: 5px;
+  text-align: justify;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.75s ease;
+}
+
+#days-gallery .day-info li:nth-of-type(1) { transition-delay: 2.7s; }
+#days-gallery .day-info li:nth-of-type(2) { transition-delay: 2.9s; }
+#days-gallery .day-info li:nth-of-type(3) { transition-delay: 3.1s; }
+
+/* Close Button */
+.btn-close {
+  position: absolute;
+  z-index: 100;
+  top: 20px;
+  right: 20px;
+  height: 24px;
+  width: 24px;
+  pointer-events: none;
+}
+
+.btn-close::before,
+.btn-close::after {
+  position: absolute;
+  top: 12px;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.btn-close::after {
+  transform: rotate(45deg) translateX(-12px);
+  transition-delay: 3s;
+}
+
+.btn-close::before {
+  transform: rotate(-45deg) translateX(12px);
+  transition-delay: 3.2s;
+}
+
+/* Hover State */
+.day-slide:hover:not(.active):not(.anim-out) .day-image {
+  transform: scale(1.1);
+}
+
+.day-slide:hover:not(.active):not(.anim-out) .day-overlay {
+  opacity: 0.6;
+}
+
+.day-slide:hover:not(.active):not(.anim-out) .day-content .day-title {
+  opacity: 1;
+  transform: translateY(30px);
+}
+
+.day-slide:hover:not(.active):not(.anim-out) .day-content .day-title::after {
+  height: 100%;
+}
+
+/* Keyframe Animations */
+@keyframes dayImgAnimIn {
+  to {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@keyframes dayImgAnimOut {
+  to {
+    left: -100%;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (Mobile First)
+   ========================================== */
+
+/* Small Mobile (481px+) */
+@media screen and (min-width: 481px) {
+  .day-card-content {
+    padding: 30px;
+  }
+
+  .destination-name {
+    font-size: 1.5rem;
+  }
+
+  .day-description {
+    font-size: 1rem;
+  }
+
+  .day-title {
+    font-size: 2em;
+  }
+
+  .day-emblem {
+    font-size: 60px;
+    width: 35%;
+  }
+
+  #days-gallery .day-info {
+    padding: 20px;
+    font-size: 0.9em;
+  }
+
+  .day-slide.active .day-overlay {
+    width: 35%;
+  }
+
+  .day-slide.active .day-content .day-title {
+    width: 35%;
+  }
+}
+
+/* Tablet (601px+) */
+@media screen and (min-width: 601px) {
+  .navbar {
+    padding: 20px 40px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+
+  #days-gallery {
+    padding: 30px;
+  }
+
+  #days-gallery .section-title {
+    font-size: 36px;
+  }
+
+  #days-gallery .section-subtitle {
+    font-size: 16px;
+  }
+
+  #days-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .day-slide {
+    flex: 1 1 calc(50% - 5px);
+    min-height: 400px;
+    height: 400px;
+  }
+
+  .day-slide.active {
+    flex: 1 1 100%;
+    height: 70vh;
+    min-height: 500px;
+  }
+
+  .day-slide.anim-out {
+    flex: 1 1 calc(50% - 5px);
+    height: 400px;
+  }
+
+  .day-title {
+    font-size: 2.5em;
+  }
+
+  .day-emblem {
+    font-size: 100px;
+  }
+
+  .tips-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tips-section {
+    padding: 80px 0;
+  }
+
+  .map-container {
+    border-radius: 20px;
+  }
+
+  .day-card-header {
+    padding: 25px 30px;
+  }
+
+  .day-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Desktop (769px+) */
+@media screen and (min-width: 769px) {
+  .nav-menu {
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    width: auto;
+    padding: 0;
+    gap: 40px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Large Desktop (1025px+) */
+@media screen and (min-width: 1025px) {
+  .hero-title {
+    font-size: 60px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 42px;
+  }
+
+  #days-gallery {
+    padding-top: 30px;
+  }
+
+  #days-gallery .section-title {
+    font-size: 42px;
+  }
+
+  #days-container {
+    flex-wrap: nowrap;
+    height: 90vh;
+    min-height: 500px;
+    gap: 0;
+  }
+
+  .day-slide {
+    flex: 1;
+    height: 100%;
+    min-height: auto;
+  }
+
+  .day-slide.active {
+    flex: 1;
+    height: 100%;
+    min-height: auto;
+  }
+
+  .day-slide.anim-out {
+    flex: 0;
+    height: 100%;
+  }
+
+  .day-title {
+    font-size: 3em;
+  }
+
+  .day-slide.active .day-overlay {
+    width: 25%;
+  }
+
+  .day-slide.active .day-content .day-title {
+    width: 25%;
+  }
+
+  .day-emblem {
+    font-size: 120px;
+    width: 25%;
+  }
+
+  #days-gallery .day-info {
+    padding: 30px 30px 30px 120px;
+    font-size: 1.25em;
+    right: 30px;
+    bottom: 30px;
+  }
+
+  .itinerary-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .tips-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .footer-container {
+    padding: 0 40px;
+  }
+}

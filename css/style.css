@@ -333,12 +333,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  /* padding: 20px; */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .mobile-menu-header .logo img {
-  height: 40px;
+  height: 60px;
+  padding-left: 30px;
+  margin: 0 auto;
 }
 
 .close-menu {
@@ -529,9 +531,9 @@ main {
 /* ==========================================
    Hero Slider Section - Mobile First
    ========================================== */
-#sliderr {
+#slider {
   width: 100%;
-  height: 70vh;
+  height: 75vh;
   margin: 0 auto;
   position: relative;
 }
@@ -681,14 +683,14 @@ main {
    Places Section - Mobile First
    ========================================== */
 #places {
-  height: 30vh;
+  height: 25vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   grid-row-gap: 16px;
   grid-column-gap: 20px;
-  max-width: 1110px;
-  margin: 0 auto;
+  /* max-width: 1110px; */
+  /* margin: 0 auto; */
   padding: 20px;
   background-color: #23272A;
 }
@@ -701,18 +703,14 @@ main {
 }
 
 .icon-title-container .clock {
-  width: 50px;
-  height: 50px;
-  background-color: white;
-  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  /* background-color: white; */
+  /* border-radius: 50%; */
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
-}
-
-.icon-title-container .clock img {
-  width: 30px;
 }
 
 .icon-title-container .country {
@@ -734,8 +732,9 @@ main {
 }
 
 .gallery-container {
-  max-width: 1400px;
-  margin: 0 auto;
+  /* max-width: 1400px; */
+  width: 100%;
+  /* margin: 0 auto; */
 }
 
 .gallery-container h1 {
@@ -1441,15 +1440,6 @@ footer p {
     padding: 15px 20px;
   }
   
-  .logo {
-    position: static;
-    transform: none;
-  }
-  
-  .logo img {
-    height: 40px;
-  }
-  
   .burger {
     display: flex;
   }
@@ -1463,18 +1453,14 @@ footer p {
   }
 
   #places {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 30px;
-    padding: 30px;
+    /* padding: 30px; */
   }
 
   .icon-title-container .clock {
-    width: 60px;
-    height: 60px;
-  }
-
-  .icon-title-container .clock img {
-    width: 35px;
+    width: 80px;
+    height: 80px;
   }
 
   .icon-title-container .country {
@@ -1576,8 +1562,8 @@ footer p {
   }
 
   #places {
-    height: 30vh;
-    padding: 40px;
+    height: 25vh;
+    /* padding: 40px; */
   }
 
   #gallery {
@@ -1721,5 +1707,537 @@ footer p {
   
   .nav-right {
     margin-right: -70px;
+  }
+}
+
+
+
+/* ==========================================
+   DESTINATION PAGE - DAYS GALLERY (Mobile First)
+   ========================================== */
+/* Days Gallery Section */
+#days-gallery {
+  padding-top: 30px;
+}
+
+#days-gallery .section-title {
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'serif';
+}
+
+#days-gallery .section-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/* Days Container */
+#days-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  min-height: auto;
+  gap: 15px;
+}
+
+/* Day Slide Styles */
+.day-slide {
+  position: relative;
+  flex: 1 1 100%;
+  min-height: 350px;
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 1.0s ease;
+}
+
+/* Last Viewed State */
+.day-slide.last-viewed .btn-close::after {
+  transition-delay: 0s;
+}
+
+.day-slide.last-viewed .btn-close::before {
+  transition-delay: 0.1s;
+}
+
+.day-slide.last-viewed .day-content .day-info {
+  transition-delay: 0s;
+}
+
+.day-slide.last-viewed .day-content .day-info li:nth-of-type(1) {
+  transition-delay: 0.2s;
+}
+
+.day-slide.last-viewed .day-content .day-info li:nth-of-type(2) {
+  transition-delay: 0.4s;
+}
+
+.day-slide.last-viewed .day-content .day-info li:nth-of-type(3) {
+  transition-delay: 0.6s;
+}
+
+.day-slide.last-viewed .day-content .day-emblem {
+  transition: all 0.5s ease;
+  transition-delay: 0s;
+}
+
+/* Last Viewed & Active */
+.day-slide.last-viewed .day-image,
+.day-slide.active .day-image {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Active State */
+.day-slide.active {
+  cursor: default;
+  min-height: 80vh;
+  height: 80vh;
+}
+
+.day-slide.active .day-overlay {
+  width: 40%;
+  background-size: 100% 100%;
+  transition: all 1.25s ease;
+  transition-delay: 1.75s;
+}
+
+.day-slide.active .day-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.day-slide.active .day-content .day-title {
+  width: 40%;
+  opacity: 1;
+  transform: translateY(30px);
+  transition: all 1s ease;
+  transition-delay: 1.25s;
+}
+
+.day-slide.active .day-content .day-title::after {
+  height: 100%;
+  color: white;
+  overflow: initial;
+}
+
+.day-slide.active .day-content .day-title::before {
+  transform: scaleX(1);
+  transition-delay: 2s;
+}
+
+.day-slide.active .day-content .day-info {
+  opacity: 1;
+}
+
+.day-slide.active .day-content .day-info li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.day-slide.active .day-content .day-emblem {
+  opacity: 0.8;
+  transform: translateY(100px);
+}
+
+.day-slide.active .btn-close {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.day-slide.active .btn-close::before,
+.day-slide.active .btn-close::after {
+  opacity: 1;
+}
+
+.day-slide.active .btn-close::after {
+  transform: rotate(45deg) translateX(0px);
+}
+
+.day-slide.active .btn-close::before {
+  transform: rotate(-45deg) translateX(0px);
+}
+
+/* Animation In State */
+.day-slide.anim-in {
+  transition-delay: 0.5s;
+}
+
+.day-slide.anim-in .day-image {
+  top: -20%;
+  left: -140%;
+  height: 140%;
+  width: 140%;
+  animation: dayImgAnimIn 1.2s forwards;
+}
+
+/* Animation Out State */
+.day-slide.anim-out {
+  flex: 1 1 100%;
+  min-height: 350px;
+  height: 350px;
+  cursor: default;
+  transition-delay: 0.5s;
+}
+
+.day-slide.anim-out .day-image {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  animation: dayImgAnimOut 1.2s forwards;
+}
+
+/* Staggered animation delays */
+.day-slide:nth-of-type(1).anim-in .day-image { animation-delay: 0.2s; }
+.day-slide:nth-of-type(2).anim-in .day-image { animation-delay: 0.4s; }
+.day-slide:nth-of-type(3).anim-in .day-image { animation-delay: 0.6s; }
+.day-slide:nth-of-type(4).anim-in .day-image { animation-delay: 0.8s; }
+
+.day-slide:nth-of-type(1).anim-out .day-image { animation-delay: 0.2s; }
+.day-slide:nth-of-type(2).anim-out .day-image { animation-delay: 0.4s; }
+.day-slide:nth-of-type(3).anim-out .day-image { animation-delay: 0.6s; }
+.day-slide:nth-of-type(4).anim-out .day-image { animation-delay: 0.8s; }
+
+/* Day Image */
+.day-image {
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+  pointer-events: none;
+  transition: all 1s ease;
+}
+
+/* Day Overlay */
+.day-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0));
+  background-position: 0 0;
+  background-size: 100% 200%;
+  opacity: 1;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+/* Day Content */
+.day-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* Day Title */
+.day-title {
+  position: absolute;
+  top: -10px;
+  height: 65px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.8em;
+  text-align: center;
+  text-shadow: 0 2px 2px #2f2f2f;
+  color: #3f3f3f;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  font-family: 'serif';
+}
+
+.day-title::after {
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 100%;
+  display: block;
+  content: attr(data-title);
+  overflow: hidden;
+  color: #ffd700;
+  transition: all 0.85s ease;
+}
+
+.day-title::before {
+  position: absolute;
+  bottom: 15px;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 85%;
+  background: white;
+  box-shadow: 0 2px 6px #2f2f2f;
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 1.25s ease;
+}
+
+/* Day Emblem */
+.day-emblem {
+  position: absolute;
+  height: 200px;
+  width: 40%;
+  opacity: 0;
+  transform: translateY(120px);
+  transition: all 1s ease;
+  transition-delay: 1.75s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Day Info */
+.day-info {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  padding: 15px;
+  font-size: 0.85em;
+  color: white;
+  text-shadow: 0 1px 4px #0f0f0f;
+  background-image: linear-gradient(90deg, rgba(20, 20, 20, 0), rgba(20, 20, 20, 0.7));
+  opacity: 0;
+  transition: all 1s ease;
+  transition-delay: 2s;
+  list-style: none;
+}
+
+.day-info li {
+  position: relative;
+  margin-bottom: 5px;
+  text-align: justify;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.75s ease;
+}
+
+.day-info li:nth-of-type(1) { transition-delay: 2.7s; }
+.day-info li:nth-of-type(2) { transition-delay: 2.9s; }
+.day-info li:nth-of-type(3) { transition-delay: 3.1s; }
+
+/* Close Button */
+.btn-close {
+  position: absolute;
+  z-index: 100;
+  top: 20px;
+  right: 20px;
+  height: 24px;
+  width: 24px;
+  pointer-events: none;
+}
+
+.btn-close::before,
+.btn-close::after {
+  position: absolute;
+  top: 12px;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.btn-close::after {
+  transform: rotate(45deg) translateX(-12px);
+  transition-delay: 3s;
+}
+
+.btn-close::before {
+  transform: rotate(-45deg) translateX(12px);
+  transition-delay: 3.2s;
+}
+
+/* Hover State */
+.day-slide:hover:not(.active):not(.anim-out) .day-image {
+  transform: scale(1.1);
+}
+
+.day-slide:hover:not(.active):not(.anim-out) .day-overlay {
+  opacity: 0.6;
+}
+
+.day-slide:hover:not(.active):not(.anim-out) .day-content .day-title {
+  opacity: 1;
+  transform: translateY(30px);
+}
+
+.day-slide:hover:not(.active):not(.anim-out) .day-content .day-title::after {
+  height: 100%;
+}
+
+/* Keyframe Animations */
+@keyframes dayImgAnimIn {
+  to {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@keyframes dayImgAnimOut {
+  to {
+    left: -100%;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (Mobile First)
+   ========================================== */
+
+/* Small Mobile */
+@media screen and (min-width: 481px) {
+  .day-title {
+    font-size: 2em;
+  }
+
+  .day-emblem {
+    font-size: 60px;
+    width: 35%;
+  }
+
+  .day-info {
+    font-size: 0.9em;
+    padding: 20px;
+  }
+
+  .day-slide.active .day-overlay {
+    width: 35%;
+  }
+
+  .day-slide.active .day-content .day-title {
+    width: 35%;
+  }
+}
+
+/* Tablet - 2 columns */
+@media screen and (min-width: 601px) {
+  #days-gallery .section-title {
+    font-size: 36px;
+  }
+
+  #days-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .day-slide {
+    flex: 1 1 calc(50% - 5px);
+    min-height: 400px;
+    height: 400px;
+  }
+
+  .day-slide.active {
+    flex: 1 1 100%;
+    height: 70vh;
+    min-height: 500px;
+  }
+
+  .day-slide.anim-out {
+    flex: 1 1 calc(50% - 5px);
+    height: 400px;
+  }
+
+  .day-title {
+    font-size: 2.5em;
+  }
+
+  .day-emblem {
+    font-size: 100px;
+    width: 25%;
+  }
+
+  .day-info {
+    padding: 20px;
+    font-size: 0.9em;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .day-slide.active .day-overlay {
+    width: 25%;
+  }
+
+  .day-slide.active .day-content .day-title {
+    width: 25%;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+  #days-gallery .section-title {
+    font-size: 42px;
+  }
+
+  #days-gallery .section-subtitle {
+    font-size: 16px;
+  }
+
+  #days-container {
+    flex-wrap: nowrap;
+    height: 90vh;
+    min-height: 500px;
+    gap: 0;
+  }
+
+  .day-slide {
+    flex: 1;
+    height: 100%;
+    min-height: auto;
+  }
+
+  .day-slide.active {
+    flex: 1;
+    height: 100%;
+    min-height: auto;
+  }
+
+  .day-slide.anim-out {
+    flex: 0;
+    height: 100%;
+  }
+
+  .day-title {
+    font-size: 3em;
+  }
+
+  .day-emblem {
+    font-size: 120px;
+  }
+
+  .day-info {
+    padding: 30px 30px 30px 120px;
+    font-size: 1.25em;
+    right: 30px;
+    bottom: 30px;
   }
 }
