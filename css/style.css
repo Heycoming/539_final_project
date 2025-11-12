@@ -40,6 +40,10 @@ header {
   transform: scale(1.05);
 }
 
+.now.now {
+  color: white;
+}
+
 /* 左侧导航 - 紧贴 Logo 左侧 */
 .nav-left {
   display: none;
@@ -74,7 +78,7 @@ header {
 .nav-right > a {
   font-family: 'Arial', sans-serif;
   font-size: 12px;
-  color: #c5c5c8;
+  color: rgba(255, 255, 255, 0.6);
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: all 0.3s ease;
@@ -92,7 +96,7 @@ header {
 }
 
 /* Donate 按钮样式 */
-.donate-link {
+.donate-link.donate-link{
   padding: 10px 25px !important;
   background: #ffd700;
   color: #000 !important;
@@ -100,6 +104,7 @@ header {
   font-weight: 600;
   transition: all 0.3s ease;
   border: none !important;
+  font-size: 14px;
 }
 
 .donate-link:hover {
@@ -125,7 +130,7 @@ header {
   cursor: pointer;
   font-family: 'Arial', sans-serif;
   font-size: 12px;
-  color: #c5c5c8;
+  color: rgba(255, 255, 255, 0.6);
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 5px 0;
@@ -138,7 +143,7 @@ header {
 }
 
 .nav-dropdown .arrow {
-  font-size: 10px;
+  font-size: 12px;
   transition: transform 0.3s ease;
 }
 
@@ -462,7 +467,7 @@ header {
 }
 
 .mobile-submenu-toggle .arrow {
-  font-size: 10px;
+  font-size: 12px;
   transition: transform 0.3s ease;
 }
 
@@ -715,7 +720,7 @@ main {
 
 .icon-title-container .country {
   font-size: 10px;
-  color: #88888a;
+  color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
@@ -764,7 +769,7 @@ main {
 /* Gallery Card */
 .card {
   position: relative;
-  height: 400px;
+  height: 200px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -829,7 +834,7 @@ main {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 15px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -934,7 +939,7 @@ main {
   font-family: 'Arial', sans-serif;
   font-size: 11px;
   letter-spacing: 5px;
-  color: #88888a;
+  color: white;
   text-transform: uppercase;
   position: relative;
   transform: translateX(-50px);
@@ -1003,7 +1008,7 @@ main {
 #about-hero {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 30vh;
   min-height: 400px;
   display: flex;
   align-items: center;
@@ -1037,9 +1042,8 @@ main {
 
 #about-hero .hero-content .meta {
   display: inline-block;
-  font-size: 11px;
   letter-spacing: 5px;
-  color: #88888a;
+  color: white;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -1108,7 +1112,6 @@ main {
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.85);
   margin-bottom: 20px;
-  text-align: justify;
 }
 
 .story-image {
@@ -1397,7 +1400,7 @@ footer {
 
 footer p {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 15px;
 }
 
@@ -1409,7 +1412,7 @@ footer p {
 
 .footer-links a {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: color 0.3s ease;
@@ -1489,7 +1492,7 @@ footer p {
   }
 
   .story-image {
-    height: 400px;
+    height: 500px;
   }
 
   .stats-section {
@@ -1566,10 +1569,6 @@ footer p {
     /* padding: 40px; */
   }
 
-  #gallery {
-    padding: 60px 20px;
-  }
-
   .gallery-container h1 {
     font-size: 56px;
     margin-bottom: 15px;
@@ -1616,7 +1615,7 @@ footer p {
   }
 
   #about-hero {
-    height: 70vh;
+    height: 95vh;
   }
 
   #about-hero .hero-content h1 {
@@ -1628,7 +1627,7 @@ footer p {
   }
 
   #about-content {
-    padding: 80px 40px;
+    padding: 40px 40px;
   }
 
   #about-content h2 {
@@ -1661,7 +1660,7 @@ footer p {
 /* Large Desktop Breakpoint (1024px+) */
 @media screen and (min-width: 1024px) {
   .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .services-grid {
@@ -1676,7 +1675,7 @@ footer p {
 /* Extra Large Desktop (1200px+) */
 @media screen and (min-width: 1200px) {
   .gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
   
   .nav-left {

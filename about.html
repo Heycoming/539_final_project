@@ -12,13 +12,13 @@
 <body>
   <header>
     <nav class="nav-left">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="now">Home</a>
       <div class="nav-dropdown">
         <a class="dropdown-toggle">Places <span class="arrow">▼</span></a>
         <div class="dropdown-menu">
           <a href="#places" class="all-destinations">All Destinations</a>
 
-        <!-- For now the unimplemented cities will be directed to the #places section -->
+          <!-- For now the unimplemented cities will be directed to the #places section -->
           <div class="dropdown-submenu">
             <a class="submenu-toggle">New York <span class="arrow-right">›</span></a>
             <div class="submenu-content">
@@ -74,11 +74,11 @@
               <a href="#places">Philadelphia</a>
             </div>
           </div>
-          
+
           <div class="dropdown-submenu">
             <a class="submenu-toggle">Washington DC <span class="arrow-right"></span></a>
           </div>
-          
+
           <div class="dropdown-submenu">
             <a class="submenu-toggle">Washington <span class="arrow-right">›</span></a>
             <div class="submenu-content">
@@ -86,7 +86,7 @@
               <a href="#places">Wheat Field</a>
             </div>
           </div>
-          
+
           <div class="dropdown-submenu">
             <a class="submenu-toggle">Michigan <span class="arrow-right">›</span></a>
             <div class="submenu-content">
@@ -104,17 +104,19 @@
         </div>
       </div>
     </nav>
-    
+
     <div class="logo">
-      <img src="image/logo.png" alt="Logo">
+      <a href="index.html">
+        <img src="image/logo.png" alt="Logo for the Whole website, which is a slice of carrot">
+      </a>
     </div>
-    
+
     <nav class="nav-right">
-      <a href="#gallery">Photography</a>
+      <a href="index.html#gallery">Photography</a>
       <a href="about.html">About Me</a>
-      <a href="#" class="donate-link">Donate</a>
+      <a href="#" class="donate-link">Tip A Coffee☕</a>
     </nav>
-    
+
     <div class="burger">
       <span></span>
       <span></span>
@@ -125,120 +127,106 @@
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu-overlay">
     <div class="mobile-menu-header">
-      <div class="logo"><img src="image/logo.png" alt="Logo"></div>
+      <div class="logo"><img src="image/logo.png" alt="Logo for the Whole website, which is a slice of carrot"></div>
       <div class="close-menu">✕</div>
     </div>
     <nav class="mobile-nav">
-      <a href="#home">Home</a>
-      
+      <a href="index.html">Home</a>
+
       <div class="mobile-dropdown">
         <a href="#places" class="mobile-dropdown-toggle">Places <span class="arrow">▼</span></a>
         <div class="mobile-dropdown-menu">
           <a href="#places" class="all-destinations">All Destinations</a>
-          
+
           <!-- Mobile 二级菜单 -->
           <div class="mobile-submenu">
             <a class="mobile-submenu-toggle">New York <span class="arrow">▼</span></a>
             <div class="mobile-submenu-content">
               <a href="#places">New York City</a>
-              <a href="#places">Buffalo</a>
-              <a href="#places">Albany</a>
+              <a href="#places">Ithaca</a>
+              <a href="#places">Syracuse</a>
             </div>
           </div>
-          
+
           <div class="mobile-submenu">
             <a class="mobile-submenu-toggle">Florida <span class="arrow">▼</span></a>
             <div class="mobile-submenu-content">
               <a href="#places">Miami</a>
-              <a href="#places">Orlando</a>
-              <a href="#places">Tampa</a>
-              <a href="#places">Key West</a>
             </div>
           </div>
-          
+
           <div class="mobile-submenu">
             <a class="mobile-submenu-toggle">Nevada <span class="arrow">▼</span></a>
             <div class="mobile-submenu-content">
               <a href="#places">Las Vegas</a>
-              <a href="#places">Reno</a>
             </div>
           </div>
-          
+
           <div class="mobile-submenu">
             <a class="mobile-submenu-toggle">Utah <span class="arrow">▼</span></a>
             <div class="mobile-submenu-content">
-              <a href="#places">Salt Lake City</a>
-              <a href="#places">Moab</a>
-              <a href="#places">Park City</a>
+              <a href="#places">Zion</a>
+              <a href="#places">Bryce</a>
+              <a href="#places">Hanksville</a>
             </div>
           </div>
-          
+
           <div class="mobile-submenu">
             <a class="mobile-submenu-toggle">Arizona <span class="arrow">▼</span></a>
             <div class="mobile-submenu-content">
-              <a href="#places">Phoenix</a>
+              <a href="#places">Monument Valley</a>
+              <a href="#places">Antelope</a>
+              <a href="#places">Grand Canyon</a>
               <a href="#places">Sedona</a>
-              <a href="#places">Tucson</a>
             </div>
           </div>
-          
-          <div class="mobile-submenu">
-            <a class="mobile-submenu-toggle">Colorado <span class="arrow">▼</span></a>
-            <div class="mobile-submenu-content">
-              <a href="#places">Denver</a>
-              <a href="#places">Aspen</a>
-              <a href="#places">Boulder</a>
-            </div>
-          </div>
-          
+
           <div class="mobile-submenu">
             <a class="mobile-submenu-toggle">New Mexico <span class="arrow">▼</span></a>
             <div class="mobile-submenu-content">
-              <a href="#places">Santa Fe</a>
-              <a href="#places">Albuquerque</a>
+              <a href="#places">Shiprock</a>
             </div>
           </div>
-          
+
           <div class="mobile-submenu">
             <a class="mobile-submenu-toggle">Peninsula <span class="arrow">▼</span></a>
             <div class="mobile-submenu-content">
-              <a href="#places">San Francisco</a>
-              <a href="#places">San Jose</a>
-              <a href="#places">Palo Alto</a>
+              <a href="#places">Philadelphia</a>
             </div>
           </div>
-          
+
           <div class="mobile-submenu">
             <a class="mobile-submenu-toggle">Washington DC <span class="arrow">▼</span></a>
-            <div class="mobile-submenu-content">
-              <a href="#places">Capitol Hill</a>
-              <a href="#places">Georgetown</a>
-            </div>
           </div>
-          
+
           <div class="mobile-submenu">
             <a class="mobile-submenu-toggle">Washington <span class="arrow">▼</span></a>
             <div class="mobile-submenu-content">
               <a href="#places">Seattle</a>
-              <a href="#places">Spokane</a>
-              <a href="#places">Tacoma</a>
+              <a href="#places">Wheat Field</a>
             </div>
           </div>
-          
+
           <div class="mobile-submenu">
             <a class="mobile-submenu-toggle">Michigan <span class="arrow">▼</span></a>
             <div class="mobile-submenu-content">
-              <a href="#places">Detroit</a>
               <a href="#places">Ann Arbor</a>
-              <a href="#places">Grand Rapids</a>
+              <a href="NorthMichigan.html">North Michigan</a>
+            </div>
+          </div>
+
+          <div class="mobile-submenu">
+            <a class="mobile-submenu-toggle">Ohio <span class="arrow">▼</span></a>
+            <div class="mobile-submenu-content">
+              <a href="#places">Columbus</a>
             </div>
           </div>
         </div>
       </div>
-      
-      <a href="#gallery">Photography</a>
+
+      <a href="index.html#gallery">Photography</a>
       <a href="about.html">About Me</a>
-      <a href="#" class="mobile-donate">Donate</a>
+      <a href="#" class="mobile-donate">Tip A Coffee☕</a>
     </nav>
   </div>
 
@@ -265,22 +253,22 @@
           <div class="story-grid">
             <div class="story-text">
               <p>
-                I've always been captivated by the world's diversity—the way a sunrise looks different in every corner of the globe, 
-                how each culture tells its own unique story through food, art, and tradition. My journey as a traveler began with 
-                a simple backpack and a one-way ticket to Europe, and it has since evolved into a lifelong passion.
+                I've always been captivated by the world's diversity and beauty—the way a sunset looks different in every corner of the globe, 
+                how each place tells its own unique story through food, art, and tradition. 
               </p>
               <p>
-                Over the past 8 years, I've explored more than 45 countries across 6 continents. From the bustling streets of Tokyo 
-                to the serene landscapes of Iceland, each destination has taught me something new about the world and about myself.
+                I've been a photography lover for more than three years. I like to capture the unique moment of scenery, faces of people, or maybe just a cute glimpse of a kitty.
               </p>
               <p>
-                Through this journal, I share not just the places I visit, but the experiences, the people I meet, and the lessons 
-                learned along the way. Travel, to me, is more than just seeing new places—it's about connecting with humanity in 
-                its most authentic form.
+                2025 is the first year that I set foot on the land of the USA. Scenery and kindness have no nationality, hence I believe there are still a lot out there for me to explore and feel. Over the past 8 months, I've explored more than 10 states across the US. From the bustling streets of New York City 
+                to the serene landscapes of North Michigan, each destination has taught me something new about the world and about myself.
+              </p>
+              <p>
+                Through this journal, I share not just the scenery I captured, but the experiences, the information, the people I meet, and the memories I cherished along the journeys.
               </p>
             </div>
             <div class="story-image">
-              <img src="image/image2.jpg" alt="Travel moment">
+              <img src="image/about_me.jpg" alt="Travel moment">
             </div>
           </div>
         </div>
@@ -288,20 +276,20 @@
         <!-- Stats Section -->
         <div class="stats-section">
           <div class="stat-item">
-            <div class="stat-number">45+</div>
-            <div class="stat-label">Countries Visited</div>
+            <div class="stat-number">11</div>
+            <div class="stat-label">States Visited</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">6</div>
-            <div class="stat-label">Continents Explored</div>
+            <div class="stat-number">30+</div>
+            <div class="stat-label">Cities Explored</div>
           </div>
           <div class="stat-item">
             <div class="stat-number">1000+</div>
             <div class="stat-label">Photos Captured</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">8</div>
-            <div class="stat-label">Years Traveling</div>
+            <div class="stat-number">10</div>
+            <div class="stat-label">Months Traveling</div>
           </div>
         </div>
 
@@ -332,35 +320,8 @@
           </div>
         </div>
 
-        <!-- Travel Philosophy -->
-        <div class="philosophy-section">
-          <h2>My Travel Philosophy</h2>
-          <div class="philosophy-content">
-            <div class="philosophy-item">
-              <div class="philosophy-number">01</div>
-              <h3>Travel Slow</h3>
-              <p>I believe in spending quality time in each destination, immersing myself in local culture rather than rushing through a checklist.</p>
-            </div>
-            <div class="philosophy-item">
-              <div class="philosophy-number">02</div>
-              <h3>Connect Authentically</h3>
-              <p>The best travel experiences come from genuine connections with locals and fellow travelers.</p>
-            </div>
-            <div class="philosophy-item">
-              <div class="philosophy-number">03</div>
-              <h3>Respect & Preserve</h3>
-              <p>Traveling responsibly means respecting local customs, supporting local businesses, and minimizing environmental impact.</p>
-            </div>
-            <div class="philosophy-item">
-              <div class="philosophy-number">04</div>
-              <h3>Stay Curious</h3>
-              <p>Every place has a story to tell. I approach each destination with an open mind and endless curiosity.</p>
-            </div>
-          </div>
-        </div>
-
         <!-- Gallery Highlights -->
-        <div class="highlights-section">
+        <!-- <div class="highlights-section">
           <h2>Travel Highlights</h2>
           <div class="highlights-grid">
             <div class="highlight-card">
@@ -392,7 +353,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- Contact CTA -->
         <div class="contact-section">
@@ -424,5 +385,59 @@
   </footer>
 
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const burger = document.querySelector('.burger');
+      const mobileMenu = document.querySelector('.mobile-menu-overlay');
+      const closeMenu = document.querySelector('.close-menu');
+      const mobileDropdown = document.querySelector('.mobile-dropdown');
+      const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
 
+      // 打开移动菜单
+      if (burger) {
+        burger.addEventListener('click', function () {
+          burger.classList.toggle('active');
+          mobileMenu.classList.toggle('active');
+          document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+      }
+
+      // 关闭移动菜单
+      if (closeMenu) {
+        closeMenu.addEventListener('click', function () {
+          burger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      }
+
+      // Mobile dropdown toggle (Places 一级菜单)
+      if (mobileDropdownToggle) {
+        mobileDropdownToggle.addEventListener('click', function (e) {
+          e.preventDefault();
+          mobileDropdown.classList.toggle('active');
+        });
+      }
+
+      // Mobile submenu toggles (州的二级菜单)
+      const mobileSubmenuToggles = document.querySelectorAll('.mobile-submenu-toggle');
+      mobileSubmenuToggles.forEach(toggle => {
+        toggle.addEventListener('click', function (e) {
+          e.preventDefault();
+          const submenu = this.closest('.mobile-submenu');
+          submenu.classList.toggle('active');
+        });
+      });
+
+      // 点击城市链接时关闭菜单
+      const mobileNavLinks = document.querySelectorAll('.mobile-nav a:not(.mobile-dropdown-toggle):not(.mobile-submenu-toggle)');
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function () {
+          burger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+    });
+</script>
 </html>
