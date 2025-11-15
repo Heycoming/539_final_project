@@ -11,7 +11,8 @@
 
 <body>
   <header>
-    <nav class="nav-left">
+    <nav class="nav-left" aria-label="Left navigation">
+      <a href="#" class="donate-link">Tip A Coffee☕</a>
       <a href="index.html" class="now">Home</a>
       <div class="nav-dropdown">
         <a class="dropdown-toggle">Places <span class="arrow">▼</span></a>
@@ -109,10 +110,10 @@
       <img src="image/logo.png" alt="Logo for the Whole website, which is a slice of carrot">
     </div>
 
-    <nav class="nav-right">
+    <nav class="nav-right" aria-label="Right navigation">
       <a href="#gallery">Photography</a>
       <a href="about.html">About Me</a>
-      <a href="#" class="donate-link">Tip A Coffee☕</a>
+      
     </nav>
 
     <div class="burger">
@@ -267,13 +268,13 @@
           <li class="slide active" data-slide="0">
             <img src="image/cover.jpg" alt="First Cover Picture">
           </li>
-          <li class="slide active" data-slide="1">
+          <li class="slide" data-slide="1">
             <img src="image/west_cover.jpg" alt="West America Cover">
           </li>
-          <li class="slide active" data-slide="2">
+          <li class="slide" data-slide="2">
             <img src="image/seattle_cover.jpg" alt="Seattle Cover">
           </li>
-          <li class="slide active" data-slide="3">
+          <li class="slide" data-slide="3">
             <img src="image/nm_cover.jpg" alt="North Michigan Cover">
           </li>
         </ul>
@@ -581,7 +582,7 @@
               <div class="location-tag">Eastern</div>
               <h3>North Michigan, Michigan</h3>
               <p class="description">Northern Michigan is a land where sapphire lakes kiss endless forests, and the air carries the scent of pine and possibility, a quiet haven where nature's beauty feels boundless and eternal.</p>
-              <a href="#" class="read-more">Explore →</a>
+              <a href="NorthMichigan.html" class="read-more">Explore →</a>
             </div>
           </div>
 
@@ -623,7 +624,6 @@
       let currentSlide = 0;
 
       function showSlide(index) {
-        // 移除所有 active 类
         slides.forEach(slide => slide.classList.remove('active'));
         textContents.forEach(content => content.classList.remove('active'));
 

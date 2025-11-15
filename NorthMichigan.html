@@ -11,34 +11,34 @@
 
 <body>
   <header>
-    <nav class="nav-left">
+    <nav class="nav-left" aria-label="Left navigation">
       <a href="index.html">Home</a>
       <div class="nav-dropdown">
         <a class="dropdown-toggle">Places <span class="arrow">▼</span></a>
         <div class="dropdown-menu">
-          <a href="#places" class="all-destinations">All Destinations</a>
-          
+          <a href="index.html#places" class="all-destinations">All Destinations</a>
+
           <div class="dropdown-submenu">
             <a class="submenu-toggle">Michigan <span class="arrow-right">›</span></a>
             <div class="submenu-content">
-              <a href="#places">Ann Arbor</a>
-              <a href="destination.html">North Michigan</a>
+              <a href="index.html#MI">Ann Arbor</a>
+              <a href="NorthMichigan.html">North Michigan</a>
             </div>
           </div>
         </div>
       </div>
     </nav>
-    
+
     <div class="logo">
-      <img src="image/logo.png" alt="Logo">
+      <img src="image/logo.png" alt="Logo for the Whole website, which is a slice of carrot">
     </div>
-    
-    <nav class="nav-right">
-      <a href="#gallery">Photography</a>
+
+    <nav class="nav-right" aria-label="Right navigation">
+      <a href="index.html#gallery">Photography</a>
       <a href="about.html">About Me</a>
       <a href="#" class="donate-link">Donate</a>
     </nav>
-    
+
     <div class="burger">
       <span></span>
       <span></span>
@@ -49,32 +49,38 @@
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu-overlay">
     <div class="mobile-menu-header">
-      <div class="logo"><img src="image/logo.png" alt="Logo"></div>
+      <div class="logo"><img src="image/logo.png" alt="Logo for the Whole website, which is a slice of carrot"></div>
       <div class="close-menu">✕</div>
     </div>
     <nav class="mobile-nav">
       <a href="index.html">Home</a>
-      <a href="#gallery">Photography</a>
+      <a href="index.html#gallery">Photography</a>
       <a href="about.html">About Me</a>
       <a href="#" class="mobile-donate">Donate</a>
     </nav>
   </div>
 
   <main>
+    <h1 class="section-title">North Michigan</h1>
+    <p class="section-subtitle">Explore each day of my unforgettable adventure</p>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m74!1m12!1m3!1d2896419.0595712536!2d-89.54459404415947!3d44.85141784411513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m59!3e0!4m3!3m2!1d42.2955225!2d-83.7140028!4m5!1s0x4d4aa1df1009346d%3A0xc3efe5a7aeafc3a4!2sSkyBridge%20Michigan!3m2!1d45.163774!2d-84.9318806!4m5!1s0x4d358b3940a9ad83%3A0xeac771ab20cc7a7a!2sMackinaw%20City%2C%20MI!3m2!1d45.777498699999995!2d-84.72714649999999!4m5!1s0x4d49ba83da5f2177%3A0x1305ac725c8585bd!2sTahquamenon%20Falls%20State%20Park!3m2!1d46.6053783!2d-85.2019773!4m5!1s0x4d4ec3f59bef320b%3A0xe480b3c31e71eb18!2sPictured%20Rocks%20National%20Lakeshore!3m2!1d46.568775599999995!2d-86.3186376!4m5!1s0x4d5a83ab442ba0eb%3A0xca056ee77d4c790c!2sCopper%20Harbor%2C%20MI!3m2!1d47.468311299999996!2d-87.8903203!4m5!1s0x4d50c830dcb62d85%3A0xbe72cbcecc04ef7d!2sHoughton%2C%20MI!3m2!1d47.121133099999994!2d-88.5694182!4m5!1s0x4d563412b67f1f75%3A0x1fc884b8e48c222a!2sPorcupine%20Mountains!3m2!1d46.7759417!2d-89.7350566!4m5!1s0x52a9dbfa1a616aa1%3A0x9eb8d80cfa5ca8d1!2sCopper%20Peak!3m2!1d46.5987594!2d-90.08695809999999!4m5!1s0x4d4c19e475b4fc33%3A0x6bdc192aabd3705e!2sKitch-iti-kipi%2C%20Sawmill%20Road%2C%20Manistique%2C%20MI!3m2!1d46.004149999999996!2d-86.3819556!5e0!3m2!1sen!2sus!4v1763180493372!5m2!1sen!2sus"
+         style="border:0;" allowfullscreen="" loading="lazy" title="Michigan Road Trip Route Map"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
     <!-- Days Gallery Section -->
     <section id="days-gallery">
       <div class="gallery-container">
-        <h2 class="section-title">North Michigan</h2>
-        <p class="section-subtitle">Explore each day of our unforgettable adventure</p>
-        
         <div id="days-container">
           <!-- Day 1 -->
           <div class="day-slide anim-in" data-day="1">
-            <div class="day-image" style="background-image: url('image/cover.jpg');"></div>
+            <div class="day-image" style="background-image: url('image/day1-1.jpg');"></div>
             <div class="day-overlay"></div>
             <div class="day-content">
               <h2 class="day-title" data-title="Day 1">Day 1</h2>
-              <div class="day-emblem">🏞️</div>
+              <!-- <div class="day-emblem">🏞️</div> -->
               <ul class="day-info">
                 <li class="location">Location: Sleeping Bear Dunes</li>
                 <li class="distance">Distance: 120 miles</li>
@@ -86,11 +92,11 @@
 
           <!-- Day 2 -->
           <div class="day-slide anim-in" data-day="2">
-            <div class="day-image" style="background-image: url('image/image2.jpg');"></div>
+            <div class="day-image" style="background-image: url('image/day2.jpg');"></div>
             <div class="day-overlay"></div>
             <div class="day-content">
-              <h2 class="day-title" data-title="Day 2">Day 2</h2>
-              <div class="day-emblem">🌲</div>
+              <h2 class="day-title" data-title="Day 2" aria-hidden="true">Day 2</h2>
+              <!-- <div class="day-emblem">🌲</div> -->
               <ul class="day-info">
                 <li class="location">Location: Pictured Rocks</li>
                 <li class="distance">Distance: 85 miles</li>
@@ -102,11 +108,11 @@
 
           <!-- Day 3 -->
           <div class="day-slide anim-in" data-day="3">
-            <div class="day-image" style="background-image: url('image/image3.jpg');"></div>
+            <div class="day-image" style="background-image: url('image/day3.jpg');"></div>
             <div class="day-overlay"></div>
             <div class="day-content">
               <h2 class="day-title" data-title="Day 3">Day 3</h2>
-              <div class="day-emblem">🏔️</div>
+              <!-- <div class="day-emblem">🏔️</div> -->
               <ul class="day-info">
                 <li class="location">Location: Mackinac Island</li>
                 <li class="distance">Distance: 95 miles</li>
@@ -118,11 +124,11 @@
 
           <!-- Day 4 -->
           <div class="day-slide anim-in" data-day="4">
-            <div class="day-image" style="background-image: url('image/cover.jpg');"></div>
+            <div class="day-image" style="background-image: url('image/day4.jpg');"></div>
             <div class="day-overlay"></div>
             <div class="day-content">
               <h2 class="day-title" data-title="Day 4">Day 4</h2>
-              <div class="day-emblem">🌅</div>
+              <!-- <div class="day-emblem">🌅</div> -->
               <ul class="day-info">
                 <li class="location">Location: Tahquamenon Falls</li>
                 <li class="distance">Distance: 110 miles</li>
@@ -147,21 +153,21 @@
 
   <script>
     // Mobile Menu Toggle
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const burger = document.querySelector('.burger');
       const mobileMenu = document.querySelector('.mobile-menu-overlay');
       const closeMenu = document.querySelector('.close-menu');
-      
+
       if (burger) {
-        burger.addEventListener('click', function() {
+        burger.addEventListener('click', function () {
           burger.classList.toggle('active');
           mobileMenu.classList.toggle('active');
           document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
         });
       }
-      
+
       if (closeMenu) {
-        closeMenu.addEventListener('click', function() {
+        closeMenu.addEventListener('click', function () {
           burger.classList.remove('active');
           mobileMenu.classList.remove('active');
           document.body.style.overflow = '';
@@ -174,13 +180,13 @@
 
       // Click on slide to expand
       slides.forEach(slide => {
-        slide.addEventListener('click', function(e) {
-          if (!e.target.closest('.btn-close') && 
-              !this.classList.contains('active') && 
-              !Array.from(this.parentElement.children).some(s => s.classList.contains('active'))) {
+        slide.addEventListener('click', function (e) {
+          if (!e.target.closest('.btn-close') &&
+            !this.classList.contains('active') &&
+            !Array.from(this.parentElement.children).some(s => s.classList.contains('active'))) {
             this.classList.remove('anim-in', 'last-viewed');
             this.classList.add('active');
-            
+
             Array.from(this.parentElement.children).forEach(sibling => {
               if (sibling !== this) {
                 sibling.classList.remove('anim-in', 'last-viewed');
@@ -193,12 +199,12 @@
 
       // Close button functionality
       btnCloseArr.forEach(btn => {
-        btn.addEventListener('click', function(e) {
+        btn.addEventListener('click', function (e) {
           e.stopPropagation();
           const slide = this.closest('.day-slide');
           slide.classList.remove('active', 'anim-in');
           slide.classList.add('last-viewed');
-          
+
           Array.from(slide.parentElement.children).forEach(sibling => {
             if (sibling !== slide) {
               sibling.classList.remove('anim-out');
@@ -208,6 +214,16 @@
         });
       });
     });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        const activeSlide = document.querySelector('.day-slide.active');
+        if (activeSlide) {
+          activeSlide.querySelector('.btn-close').click();
+        }
+      }
+    });
   </script>
 </body>
+
 </html>
