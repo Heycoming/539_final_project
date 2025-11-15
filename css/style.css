@@ -621,12 +621,10 @@ main {
   width: 100%;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  pointer-events: none;
 }
 
 .image-slider .slide.active {
   opacity: 1;
-  pointer-events: auto;
 }
 
 .image-slider .slide img {
@@ -1073,7 +1071,7 @@ main {
 .day-info li:nth-of-type(4) {transition-delay: 1.3s;}
 .day-info li:nth-of-type(5) {transition-delay: 1.4s;}
 .day-info li:nth-of-type(6) {transition-delay: 1.5s;}
-.day-info li:nth-of-type(7) {transition-delay: 1.s;}
+.day-info li:nth-of-type(7) {transition-delay: 1.6s;}
 
 .btn-close {
   position: absolute;
@@ -1177,7 +1175,7 @@ main {
 
 .day-slide.active .btn-close {
   cursor: pointer;
-  pointer-events: auto;
+  pointer-events: unset;
 }
 
 .day-slide.active .btn-close::before,
