@@ -612,9 +612,7 @@
 
   <script>
     document.getElementById("year").innerHTML = new Date().getFullYear();
-    // ==========================================
-    // 图片和文字滑块功能
-    // ==========================================
+
     document.addEventListener('DOMContentLoaded', function () {
       const slides = document.querySelectorAll('.image-slider .slide');
       const textContents = document.querySelectorAll('.slider-content');
@@ -626,12 +624,10 @@
         slides.forEach(slide => slide.classList.remove('active'));
         textContents.forEach(content => content.classList.remove('active'));
 
-        // 添加 active 类到当前项
         slides[index].classList.add('active');
         textContents[index].classList.add('active');
       }
 
-      // 下一张按钮
       if (nextBtn) {
         nextBtn.addEventListener('click', function (e) {
           e.preventDefault();
@@ -640,7 +636,6 @@
         });
       }
 
-      // 上一张按钮
       if (prevBtn) {
         prevBtn.addEventListener('click', function (e) {
           e.preventDefault();
@@ -649,11 +644,10 @@
         });
       }
 
-      // 自动播放（每5秒切换一次）
-      // setInterval(() => {
-      //   currentSlide = (currentSlide + 1) % slides.length;
-      //   showSlide(currentSlide);
-      // }, 5000);
+      setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }, 5000);
     });
 
     // ==========================================
@@ -666,7 +660,6 @@
       const mobileDropdown = document.querySelector('.mobile-dropdown');
       const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
 
-      // 打开移动菜单
       if (burger) {
         burger.addEventListener('click', function () {
           burger.classList.toggle('active');
@@ -675,7 +668,6 @@
         });
       }
 
-      // 关闭移动菜单
       if (closeMenu) {
         closeMenu.addEventListener('click', function () {
           burger.classList.remove('active');
@@ -684,7 +676,6 @@
         });
       }
 
-      // Mobile dropdown toggle (Places 一级菜单)
       if (mobileDropdownToggle) {
         mobileDropdownToggle.addEventListener('click', function (e) {
           e.preventDefault();
@@ -692,7 +683,6 @@
         });
       }
 
-      // Mobile submenu toggles (州的二级菜单)
       const mobileSubmenuToggles = document.querySelectorAll('.mobile-submenu-toggle');
       mobileSubmenuToggles.forEach(toggle => {
         toggle.addEventListener('click', function (e) {
@@ -702,7 +692,6 @@
         });
       });
 
-      // 点击城市链接时关闭菜单
       const mobileNavLinks = document.querySelectorAll('.mobile-nav a:not(.mobile-dropdown-toggle):not(.mobile-submenu-toggle)');
       mobileNavLinks.forEach(link => {
         link.addEventListener('click', function () {
@@ -716,3 +705,6 @@
 </body>
 
 </html>
+
+<!-- Content taken & modified from UMGPT with the prompt, "Write me short and poetic descriptions of all the places in the following code: ..."
+    UMGPT. (2025). UMGPT ( GPT-4.1 August 25th version) [Large language model]. -->

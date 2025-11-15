@@ -1,5 +1,5 @@
 /* ==========================================
-   HEADER & NAVIGATION - 固定顶部
+   HEADER & NAVIGATION
    ========================================== */
 header {
   position: fixed;
@@ -18,7 +18,6 @@ header {
   height: 70px;
 }
 
-/* Logo 居中 */
 .logo {
   position: absolute;
   left: 50%;
@@ -39,7 +38,6 @@ header {
   transform: scale(1.05);
 }
 
-/* 导航链接 - Mobile First (默认隐藏) */
 .nav-left,
 .nav-right {
   display: none;
@@ -60,9 +58,8 @@ header {
   margin-right: -80px;
 }
 
-/* 导航链接通用样式 */
-.nav-left > a,
-.nav-right > a {
+.nav-left>a,
+.nav-right>a {
   font-family: 'Arial', sans-serif;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.6);
@@ -75,15 +72,14 @@ header {
   text-decoration: none;
 }
 
-.nav-left > a:hover,
-.nav-right > a:hover,
-.nav-left > a.active,
-.nav-right > a.active,
+.nav-left>a:hover,
+.nav-right>a:hover,
+.nav-left>a.active,
+.nav-right>a.active,
 .now.now {
   color: white;
 }
 
-/* Donate 按钮样式 */
 .donate-link {
   padding: 10px 25px !important;
   background: #ffd700;
@@ -103,7 +99,7 @@ header {
 }
 
 /* ==========================================
-   DROPDOWN NAVIGATION - 横向二级菜单
+   DROPDOWN NAVIGATION
    ========================================== */
 .nav-dropdown {
   position: relative;
@@ -138,7 +134,6 @@ header {
   transform: rotate(180deg);
 }
 
-/* 一级菜单 */
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -164,7 +159,6 @@ header {
   transform: translateX(-50%) translateY(0);
 }
 
-/* All Destinations 特殊样式 */
 .dropdown-menu .all-destinations {
   display: block;
   padding: 12px 20px;
@@ -183,7 +177,6 @@ header {
   background: rgba(255, 215, 0, 0.1);
 }
 
-/* 二级菜单容器 */
 .dropdown-submenu {
   position: relative;
 }
@@ -215,7 +208,6 @@ header {
   transform: translateX(3px);
 }
 
-/* 二级菜单内容 - 横向显示在右侧 */
 .submenu-content {
   position: absolute;
   left: 100%;
@@ -259,7 +251,7 @@ header {
 }
 
 /* ==========================================
-   BURGER MENU - Mobile
+   BURGER MENU
    ========================================== */
 .burger {
   display: flex;
@@ -352,7 +344,7 @@ header {
   padding: 30px 20px;
 }
 
-.mobile-nav > a {
+.mobile-nav>a {
   padding: 18px 20px;
   font-size: 18px;
   color: white;
@@ -363,12 +355,11 @@ header {
   position: relative;
 }
 
-.mobile-nav > a:hover,
-.mobile-nav > a.active {
+.mobile-nav>a:hover,
+.mobile-nav>a.active {
   color: #ffd700;
 }
 
-/* Mobile Dropdown */
 .mobile-dropdown {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -391,7 +382,7 @@ header {
   transition: transform 0.3s ease;
 }
 
-.mobile-dropdown.active .arrow {
+.mobile-dropdown.active .mobile-dropdown-toggle .arrow {
   transform: rotate(180deg);
 }
 
@@ -428,7 +419,6 @@ header {
   background: rgba(255, 215, 0, 0.1);
 }
 
-/* Mobile 二级菜单 */
 .mobile-submenu {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -514,7 +504,7 @@ main {
 }
 
 /* ==========================================
-   HERO SLIDER SECTION - Mobile First
+   HERO SLIDER SECTION First
    ========================================== */
 #slider {
   width: 100%;
@@ -527,10 +517,8 @@ main {
   position: relative;
   display: flex;
   align-items: center;
-  /* max-width: 1060px; */
   width: 50%;
   left: 15%;
-  /* margin: 0 55px; */
   height: 100%;
   z-index: 3;
 }
@@ -547,7 +535,6 @@ main {
   visibility: visible;
 }
 
-/* Meta 文字 - 从左侧滑入 */
 .slider-content .meta {
   display: inline-block;
   font-family: 'Arial', 'sans-serif';
@@ -575,7 +562,6 @@ main {
   transition-delay: 0.6s;
 }
 
-/* 标题 - 放大淡入 */
 .slider-content h2 {
   font-family: 'sans-serif';
   font-weight: 400;
@@ -595,7 +581,6 @@ main {
   transition-delay: 0.4s;
 }
 
-/* Status 文字 - 从下方滑入 */
 .slide-status {
   margin-top: 10px;
   font-family: 'serif';
@@ -613,7 +598,6 @@ main {
   transition-delay: 0.8s;
 }
 
-/* 图片滑块 */
 .image-slider {
   position: absolute;
   top: 0;
@@ -654,7 +638,6 @@ main {
   left: 0;
 }
 
-/* 滑块控制按钮 */
 .image-slider a.prev,
 .image-slider a.next {
   height: 70px;
@@ -711,7 +694,7 @@ main {
 }
 
 /* ==========================================
-   PLACES SECTION - Mobile First
+   PLACES SECTION First
    ========================================== */
 #places {
   height: 25vh;
@@ -749,7 +732,7 @@ main {
 }
 
 /* ==========================================
-   GALLERY SECTION - Mobile First
+   GALLERY SECTION First
    ========================================== */
 #gallery {
   background-color: #23272A;
@@ -785,15 +768,14 @@ main {
   gap: 25px;
 }
 
-/* Gallery Card */
 .card {
   position: relative;
   height: 200px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
-              box-shadow 0.4s ease;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.4s ease;
 }
 
 .card:hover {
@@ -801,7 +783,6 @@ main {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
-/* 卡片图片 */
 .card-image {
   position: absolute;
   width: 100%;
@@ -821,7 +802,6 @@ main {
   filter: brightness(0.7);
 }
 
-/* 卡片内容 */
 .card-content {
   position: absolute;
   bottom: 0;
@@ -829,21 +809,20 @@ main {
   right: 0;
   padding: 25px;
   z-index: 2;
-  background: linear-gradient(to top, 
-              rgba(0, 0, 0, 0.9) 0%, 
-              rgba(0, 0, 0, 0.6) 20%,
-              transparent 100%);
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.6) 20%,
+      transparent 100%);
   transition: background 0.4s ease;
 }
 
 .card:hover .card-content {
-  background: linear-gradient(to top, 
-              rgba(0, 0, 0, 0.95) 0%, 
-              rgba(0, 0, 0, 0.7) 60%,
-              transparent 100%);
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.7) 60%,
+      transparent 100%);
 }
 
-/* 地区标签 */
 .location-tag {
   display: inline-block;
   padding: 5px 12px;
@@ -865,7 +844,6 @@ main {
   transform: translateY(-2px);
 }
 
-/* 卡片标题 */
 .card-content h3 {
   font-size: 24px;
   margin-bottom: 10px;
@@ -930,7 +908,7 @@ main {
 }
 
 /* ==========================================
-   DAYS GALLERY SECTION - Mobile First
+   DAYS GALLERY SECTION First
    ========================================== */
 #days-gallery {
   padding-top: 30px;
@@ -956,7 +934,6 @@ main {
   margin-bottom: 10px;
 }
 
-/* Days Container */
 #days-container {
   position: relative;
   display: flex;
@@ -967,7 +944,6 @@ main {
   min-height: auto;
 }
 
-/* Day Slide Styles */
 .day-slide {
   position: relative;
   flex: 1 1 100%;
@@ -976,7 +952,7 @@ main {
   width: 100%;
   overflow: hidden;
   cursor: pointer;
-  transition: all 1.0s ease;
+  transition: all 0.5s ease;
 }
 
 /* Day Image */
@@ -985,7 +961,7 @@ main {
   background-size: cover;
   background-position: center center;
   pointer-events: none;
-  transition: all 1s ease;
+  transition: all 0.6s ease;
 }
 
 /* Day Overlay */
@@ -1000,10 +976,9 @@ main {
   background-size: 100% 200%;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
-/* Day Content */
 .day-content {
   position: absolute;
   top: 0;
@@ -1011,27 +986,26 @@ main {
   height: 100%;
   width: 100%;
   pointer-events: none;
+  transition: all 0.3s ease;
 }
 
-/* Day Title */
 .day-title {
   position: absolute;
-  top: -10px;
+  top: -120px;
   height: 65px;
   width: 100%;
   box-sizing: border-box;
   font-size: 1.8em;
   text-align: center;
-  /* text-shadow: 0 2px 2px #2f2f2f; */
   color: white;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   font-family: 'serif';
   visibility: hidden;
-  text-shadow: 
-  0 2px 4px rgba(0, 0, 0, 0.9),
-  0 4px 8px rgba(0, 0, 0, 0.7);
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.9),
+    0 4px 8px rgba(0, 0, 0, 0.7);
 }
 
 .day-title::after {
@@ -1043,72 +1017,64 @@ main {
   content: attr(data-title);
   overflow: hidden;
   color: #ffd700;
-  transition: all 0.85s ease;
+  transition: all 0.5s ease;
 }
 
 .day-title::before {
   position: absolute;
   bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
   display: block;
   content: "";
   height: 2px;
-  width: 85%;
+  width: 100%;
   background: white;
-  /* box-shadow: 0 2px 6px #2f2f2f; */
-  transform-origin: left center;
-  transform: scaleX(0);
-  transition: transform 1.25s ease;
+  transform-origin: center center;
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 0.6s ease;
 }
 
-/* Day Emblem */
-.day-emblem {
-  position: absolute;
-  height: 200px;
-  width: 40%;
-  opacity: 0;
-  transform: translateY(120px);
-  transition: all 1s ease;
-  transition-delay: 1.75s;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 50px;
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-/* Day Info */
 .day-info {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
   padding: 15px;
-  font-size: 0.85em;
-  color: white;
+  color: rgb(204, 203, 203);
   text-shadow: 0 1px 4px #0f0f0f;
-  background-image: linear-gradient(90deg, rgba(20, 20, 20, 0), rgba(20, 20, 20, 0.7));
+  background-image: linear-gradient(90deg, rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.9));
   opacity: 0;
-  transition: all 1s ease;
-  transition-delay: 2s;
+  transition: all 0.5s ease;
+  transition-delay: 0.8s;
   list-style: none;
 }
 
 .day-info li {
   position: relative;
   margin-bottom: 5px;
-  text-align: justify;
   opacity: 0;
   transform: translateX(-30px);
-  transition: all 0.75s ease;
+  transition: all 0.4s ease;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
 }
 
-.day-info li:nth-of-type(1) { transition-delay: 2.7s; }
-.day-info li:nth-of-type(2) { transition-delay: 2.9s; }
-.day-info li:nth-of-type(3) { transition-delay: 3.1s; }
+.location {
+  color: #ffd700;
+  font-weight: bold;
+}
 
-/* Close Button */
+.day-info li:nth-of-type(1) {transition-delay: 1.0s;}
+.day-info li:nth-of-type(2) {transition-delay: 1.1s;}
+.day-info li:nth-of-type(3) {transition-delay: 1.2s;}
+.day-info li:nth-of-type(4) {transition-delay: 1.3s;}
+.day-info li:nth-of-type(5) {transition-delay: 1.4s;}
+.day-info li:nth-of-type(6) {transition-delay: 1.5s;}
+.day-info li:nth-of-type(7) {transition-delay: 1.s;}
+
 .btn-close {
   position: absolute;
   z-index: 99;
@@ -1130,20 +1096,19 @@ main {
   background-color: white;
   opacity: 0;
   cursor: pointer;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-close::after {
   transform: rotate(45deg) translateX(-12px);
-  transition-delay: 3s;
+  transition-delay: 1.2s;
 }
 
 .btn-close::before {
   transform: rotate(-45deg) translateX(12px);
-  transition-delay: 3.2s;
+  transition-delay: 1.3s;
 }
 
-/* Active State */
 .day-slide.active .day-title,
 .day-slide.anim-in .day-title,
 .day-slide:hover .day-title {
@@ -1160,15 +1125,14 @@ main {
 }
 
 .day-slide.active .day-overlay {
-  /* 🔥 Mobile：向上收起（从底部到顶部） */
-  height: 40%;  /* 修改：从 width 改为 height */
-  width: 100%;  /* 保持全宽 */
-  top: 0;       /* 固定在顶部 */
+  height: 40%;
+  width: 100%;
+  top: 0;
   left: 0;
   background-size: 100% 100%;
-  opacity: 1;   /* 🔥 新增：点击后显示颜色 */
-  transition: all 1.25s ease;
-  transition-delay: 1.75s;
+  opacity: 1;
+  transition: all 0.6s ease;
+  transition-delay: 0.6s;
 }
 
 .day-slide.active .day-content {
@@ -1177,15 +1141,18 @@ main {
   left: 0;
   height: 100%;
   width: 100%;
+  opacity: 1;
+  transform: translateY(100px);
+  transition: transform 0.5s ease;
 }
 
 .day-slide.active .day-content .day-title {
   width: 100%;
   opacity: 1;
-  color: #ffffff !important; 
+  color: #ffffff !important;
   transform: translateY(30px);
-  transition: all 1s ease;
-  transition-delay: 1.25s;
+  transition: all 0.5s ease;
+  transition-delay: 0.5s;
 }
 
 .day-slide.active .day-content .day-title::after {
@@ -1195,8 +1162,8 @@ main {
 }
 
 .day-slide.active .day-content .day-title::before {
-  transform: scaleX(1);
-  transition-delay: 2s;
+  transform: translateX(-50%) scaleX(1);
+  transition-delay: 0.8s;
 }
 
 .day-slide.active .day-content .day-info {
@@ -1206,11 +1173,6 @@ main {
 .day-slide.active .day-content .day-info li {
   opacity: 1;
   transform: translateX(0);
-}
-
-.day-slide.active .day-content .day-emblem {
-  opacity: 0.8;
-  transform: translateY(100px);
 }
 
 .day-slide.active .btn-close {
@@ -1231,7 +1193,6 @@ main {
   transform: rotate(-45deg) translateX(0px);
 }
 
-/* Last Viewed & Active States */
 .day-slide.last-viewed .day-image,
 .day-slide.active .day-image {
   top: 0;
@@ -1240,66 +1201,58 @@ main {
   width: 100%;
 }
 
-/* Animation In State */
-.day-slide.anim-in {
-  transition-delay: 0.5s;
-}
+.day-slide.anim-in {transition-delay: 0.2s;}
 
 .day-slide.anim-in .day-image {
   top: -20%;
   left: -140%;
   height: 140%;
   width: 140%;
-  animation: dayImgAnimIn 1.2s forwards;
+  animation: dayImgAnimIn 0.8s forwards;
 }
 
-/* Animation Out State */
 .day-slide.anim-out {
-    flex: 0 0 0;         /* 修改：不占据任何空间 */
-    min-height: 0;       /* 新增：最小高度为0 */
-    height: 0;           /* 修改：高度为0 */
-    opacity: 0;          /* 新增：完全透明 */
-    overflow: hidden;    /* 新增：隐藏溢出内容 */
-  }
+  flex: 0 0 0;
+  min-height: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
 
 .day-slide.anim-out .day-image {
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  animation: dayImgAnimOut 1.2s forwards;
+  animation: dayImgAnimOut 0.8s forwards;
 }
 
-/* Staggered animation delays */
-.day-slide:nth-of-type(1).anim-in .day-image { animation-delay: 0.2s; }
-.day-slide:nth-of-type(2).anim-in .day-image { animation-delay: 0.4s; }
-.day-slide:nth-of-type(3).anim-in .day-image { animation-delay: 0.6s; }
-.day-slide:nth-of-type(4).anim-in .day-image { animation-delay: 0.8s; }
-
-.day-slide:nth-of-type(1).anim-out .day-image { animation-delay: 0.2s; }
-.day-slide:nth-of-type(2).anim-out .day-image { animation-delay: 0.4s; }
-.day-slide:nth-of-type(3).anim-out .day-image { animation-delay: 0.6s; }
-.day-slide:nth-of-type(4).anim-out .day-image { animation-delay: 0.8s; }
-
-/* Hover State */
-.day-slide:hover:not(.active):not(.anim-out) .day-image {
-  transform: scale(1.1);
+.day-slide.anim-out .day-overlay,
+.day-slide.anim-out .day-content {
+  opacity: 0 !important;
+  transition: opacity 0.2s ease !important;
 }
 
-.day-slide:hover:not(.active):not(.anim-out) .day-overlay {
-  opacity: 0.6;
-}
+.day-slide:nth-of-type(1).anim-in .day-image {animation-delay: 0.1s;}
+.day-slide:nth-of-type(2).anim-in .day-image {animation-delay: 0.2s;}
+.day-slide:nth-of-type(3).anim-in .day-image {animation-delay: 0.3s;}
+.day-slide:nth-of-type(4).anim-in .day-image {animation-delay: 0.4s;}
+.day-slide:nth-of-type(1).anim-out .day-image {animation-delay: 0.1s;}
+.day-slide:nth-of-type(2).anim-out .day-image {animation-delay: 0.2s;}
+.day-slide:nth-of-type(3).anim-out .day-image {animation-delay: 0.3s;}
+.day-slide:nth-of-type(4).anim-out .day-image {animation-delay: 0.4s;}
+
+.day-slide:hover:not(.active):not(.anim-out) .day-image {transform: scale(1.1);}
+
+.day-slide:hover:not(.active):not(.anim-out) .day-overlay {opacity: 0.6;}
 
 .day-slide:hover:not(.active):not(.anim-out) .day-content .day-title {
   opacity: 1;
   transform: translateY(30px);
 }
 
-.day-slide:hover:not(.active):not(.anim-out) .day-content .day-title::after {
-  height: 100%;
-}
+.day-slide:hover:not(.active):not(.anim-out) .day-content .day-title::after {height: 100%;}
 
-/* Keyframe Animations */
 @keyframes dayImgAnimIn {
   to {
     top: 0;
@@ -1385,6 +1338,7 @@ main {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1634,7 +1588,7 @@ main {
   margin-bottom: 15px;
 }
 
-.contact-section > p {
+.contact-section>p {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 30px;
@@ -1752,6 +1706,19 @@ footer p {
   transform: translateY(-5px) scale(1.1);
 }
 
+.map-container {
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  height: 600px;
+  border-radius: 40px;
+}
+
 /* ==========================================
    RESPONSIVE BREAKPOINTS
    ========================================== */
@@ -1760,31 +1727,32 @@ footer p {
    TABLET: 768px+
    ========================================== */
 @media screen and (min-width: 768px) {
+
   /* Header */
   header {
     padding: 20px 40px;
   }
-  
+
   .nav-left,
   .nav-right {
     display: flex;
     gap: 25px;
   }
-  
-  .nav-left > a,
-  .nav-right > a,
+
+  .nav-left>a,
+  .nav-right>a,
   .nav-dropdown .dropdown-toggle {
     font-size: 11px;
   }
-  
+
   .nav-left {
     margin-left: -70px;
   }
-  
+
   .nav-right {
     margin-right: -70px;
   }
-  
+
   .donate-link {
     font-size: 14px;
     padding: 10px !important;
@@ -1794,7 +1762,7 @@ footer p {
   .mobile-menu-overlay {
     display: none !important;
   }
-  
+
   /* Slider */
   #slider {
     height: 75vh;
@@ -1803,215 +1771,211 @@ footer p {
   .meta {
     font-size: 13px;
   }
-  
+
   .slider-content.slider-content h2 {
     font-size: 110px;
     line-height: 100px;
   }
-  
+
   .slide-status.slide-status {
     font-size: 34px;
     transform: translateY(50px);
   }
-  
+
   .image-slider a.prev,
   .image-slider a.next {
     height: 91px;
     width: 50px;
     margin-top: -45px;
   }
-  
+
   .image-slider .prev {
     left: 20px;
   }
-  
+
   .image-slider .next {
     right: 20px;
   }
-  
+
   .image-slider .prev:after,
   .image-slider .next:after {
     font-size: 60px;
   }
-  
+
   /* Places */
   #places {
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 30px;
     height: 15vh;
   }
-  
+
   .icon-title-container .clock {
     width: 80px;
     height: 80px;
   }
-  
+
   .icon-title-container .country {
     font-size: 11px;
   }
-  
+
   /* Gallery */
   .gallery-container h1 {
     font-size: 42px;
   }
-  
+
   .gallery-container .subtitle {
     font-size: 16px;
   }
-  
+
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  
+
   .card {
     height: 450px;
     border-radius: 16px;
   }
-  
+
   .card-content {
     padding: 35px;
   }
-  
+
   .card-content h3 {
     font-size: 32px;
     margin-bottom: 12px;
   }
-  
+
   .description {
     font-size: 15px;
     line-height: 1.6;
   }
-  
+
   .card:hover .description {
     max-height: 100px;
     margin-bottom: 20px;
   }
-  
+
   .read-more {
     font-size: 14px;
     padding: 10px 20px;
     border-radius: 25px;
   }
-  
+
   /* Days Gallery */
   .section-title {
     font-size: 36px;
   }
-  
+
   #days-container {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
   }
-  
+
   .day-slide {
     flex: 1 1 calc(50% - 5px);
     min-height: 400px;
     height: 400px;
   }
-  
+
   .day-slide.active {
     flex: 1 1 100%;
     height: 70vh;
     min-height: 500px;
   }
-  
+
   .day-title {
     font-size: 2.5em;
   }
-  
-  .day-emblem {
-    font-size: 100px;
-    width: 25%;
-  }
-  
+
   .day-info {
     padding: 20px;
     font-size: 0.9em;
-    right: 15px;
     bottom: 15px;
+    left: 15%;
+    width: 60%;
   }
-  
+
   .day-slide.active .day-overlay {
-    width: 25%;  
+    width: 25%;
     height: 100%;
   }
-  
+
   .day-slide.active .day-content .day-title {
     width: 25%;
   }
-  
+
   /* About Page */
   #about-hero {
     height: 95vh;
   }
-  
+
   #about-hero .hero-content h1 {
     font-size: 80px;
   }
-  
+
   #about-hero .hero-content .tagline {
     font-size: 18px;
   }
-  
+
   #about-content {
     padding: 40px 40px;
   }
-  
+
   #about-content h2 {
     font-size: 48px;
   }
-  
+
   .story-grid {
     grid-template-columns: 1fr 1fr;
     align-items: center;
   }
-  
+
   .story-text p {
     font-size: 16px;
   }
-  
+
   .story-image {
     height: 500px;
   }
-  
+
   .stats-section {
     grid-template-columns: repeat(4, 1fr);
   }
-  
+
   .stat-number {
     font-size: 48px;
   }
-  
+
   .stat-label {
     font-size: 13px;
   }
-  
+
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  
+
   .philosophy-content {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
   }
-  
+
   .highlights-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
   }
-  
+
   .highlight-card {
     height: 350px;
   }
-  
+
   .contact-buttons {
     flex-direction: row;
     justify-content: center;
   }
-  
+
   .btn-primary,
   .btn-secondary {
     width: auto;
@@ -2022,105 +1986,102 @@ footer p {
    DESKTOP: 1200px+
    ========================================== */
 @media screen and (min-width: 1200px) {
+
   /* Navigation */
   .nav-left,
   .nav-right {
     gap: 40px;
   }
-  
-  .nav-left > a,
-  .nav-right > a,
+
+  .nav-left>a,
+  .nav-right>a,
   .nav-dropdown .dropdown-toggle {
     font-size: 12px;
   }
-  
+
   .nav-left {
     margin-left: -80px;
   }
-  
+
   .nav-right {
     margin-right: -80px;
   }
-  
+
   /* Gallery */
   .gallery-container h1 {
     font-size: 56px;
     margin-bottom: 15px;
   }
-  
+
   .gallery-container .subtitle {
     font-size: 18px;
     margin-bottom: 60px;
   }
-  
+
   .gallery-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 35px;
   }
-  
+
   /* Days Gallery */
   .section-title {
     font-size: 42px;
   }
-  
+
   .section-subtitle {
     font-size: 16px;
     margin-bottom: 20px;
   }
-  
+
   #days-container {
     flex-wrap: nowrap;
     height: 90vh;
     min-height: 500px;
     gap: 0;
   }
-  
+
   .day-slide {
     flex: 1;
     height: 100%;
     min-height: auto;
   }
-  
+
   .day-slide.active {
     flex: 1;
     height: 100%;
     min-height: auto;
   }
-  
+
   .day-slide.anim-out {
     flex: 0;
     height: 100%;
   }
-  
+
   .day-title {
     font-size: 3em;
   }
-  
-  .day-emblem {
-    font-size: 120px;
-  }
-  
+
   .day-info {
     padding: 30px 30px 30px 120px;
     font-size: 1.25em;
     right: 30px;
     bottom: 30px;
   }
-  
+
   /* About Page */
   #about-hero .hero-content h1 {
     font-size: 110px;
   }
-  
+
   #about-hero .hero-content .tagline {
     font-size: 20px;
   }
-  
+
   /* Services & Highlights */
   .services-grid {
     grid-template-columns: repeat(4, 1fr);
   }
-  
+
   .highlights-grid {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -2130,6 +2091,7 @@ footer p {
    LARGE DESKTOP: 1600px+
    ========================================== */
 @media screen and (min-width: 1600px) {
+
   /* Navigation - Extra spacing */
   header {
     height: 90px;
@@ -2143,13 +2105,13 @@ footer p {
   .nav-left {
     margin-left: -100px;
   }
-  
+
   .nav-right {
     margin-right: -100px;
   }
-  
-  .nav-left > a,
-  .nav-right > a,
+
+  .nav-left>a,
+  .nav-right>a,
   .nav-dropdown .dropdown-toggle {
     font-size: 15px;
   }
@@ -2166,17 +2128,4 @@ footer p {
   .gallery-grid {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
-}
-
-.map-container {
-  margin-top: 40px;
-  overflow: hidden;
-}
-
-.map-container iframe {
-  margin: 0 auto;
-  padding: 20px;
-  width: 100%;
-  height: 600px;
-  border-radius: 40px;
 }
