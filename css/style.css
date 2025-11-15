@@ -19,9 +19,9 @@ header {
 }
 
 .logo {
-  position: absolute;
+  /* position: absolute; */
   left: 50%;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
   z-index: 101;
 }
 
@@ -315,19 +315,18 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* overflow: hidden; */
 }
 
 .mobile-menu-header .logo img {
-  height: 40px;
-  margin: 0px 5px 0px 340px;
-  padding: 0px;
+  height: 50px;
+  margin-top: 5px;
 }
 
 .close-menu {
   font-size: 32px;
   color: white;
   cursor: pointer;
-  padding-left: 10px;
   width: 40px;
   height: 40px;
   transition: all 0.3s ease;
